@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     constainer : {
         flex : 2,
         margin : 0,
-        marginTop : 10,
+        marginTop : 0,
         padding : 0,
     },
     conditionTxt : {

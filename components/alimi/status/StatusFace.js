@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     margin : 0,
     padding : 0,
     textAlign : "center",
-    marginBottom :10,
+    marginBottom :0,
   },
   faceText : {
     flex : 1,

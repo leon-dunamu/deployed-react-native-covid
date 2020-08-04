@@ -13,10 +13,10 @@ export default function BottomNav({navigation}) {
             {/* it shows bottom navigation bar */}
             <View style={styles.constainer}>
                 <Text onPress={_OnPressGetPos}  style={styles.btnReload}>
-                    <MaterialCommunityIcons name="web" size={50} color="white" />
+                    <MaterialCommunityIcons name="web" size={40} color="white" />
                 </Text>
                 <Text onPress={()=>navigation.navigate('Map')} style={styles.btnToMap}>
-                    <Fontisto name="map" size={50} color="white" />
+                    <Fontisto name="map" size={35} color="white" />
                 </Text>
             </View>
         </>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         flexDirection : "row",
         margin : 0,
         padding : 0,
-        marginLeft : 25,
+        marginLeft : 20,
         marginRight : 25,
         marginBottom : 20,
         shadowColor: "#000",
