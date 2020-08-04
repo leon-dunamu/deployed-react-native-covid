@@ -6,6 +6,8 @@ import { LinearGradient } from "expo-linear-gradient";
 
 // make json to array
 import MakeInfectedArray from './publicData/MakeInfectedArray';
+import DateGapAcumulator from './make/DateGapAcumulator';
+import PositionDistance from './make/PositionDistance';
 
 // loading
 import Loading from '../Loading/Loading';
@@ -26,6 +28,7 @@ import BottomNav from './BottomNav';
 
 
 let conditions ;
+const JSON_URL = 'https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/2020-08-04/covid';
 
 export default function Index({navigation}) {
   const [isLoading, setisLoading] = useState(true);
@@ -44,23 +47,62 @@ export default function Index({navigation}) {
       } = await Location.getCurrentPositionAsync();
       setisLoading(false);
       const myLocation = {
-        latitude : 37.413294,        // to change "latitude"
-        longitude : 127.269311       // to change "longitude"
+        latitude : latitude,        // to change "latitude"
+        longitude : longitude       // to change "longitude"
       }
       console.log(latitude,longitude);
       const myad = await Location.reverseGeocodeAsync(myLocation);
       setmyAddr(`${myad[0].city}  ${myad[0].street}`);
 
-      let [PatientInfo, count]= MakeInfectedArray(latitude, longitude);
-      setCountInCircle(count);
 
-      conditions = getCondition(count);
-      setFace(conditions.conditionFace);
-      setCondition(conditions.conditionTxt);
-      setbgColor([conditions.conditionBgColor,conditions.conditionBgColor]);
+      fetch(JSON_URL)
+      .then(response => {return response.json()})
+      .then(resp => {
+        let cnt = 0;
+        resp.map((value) => {
+          let daysGap ;
+          // daysGap = isInFewDays(value.month, value.day);
+          const curDay = {
+            _month : value.month,
+            _date : value.day
+          }
+          daysGap = DateGapAcumulator(curDay);
+          if(daysGap <= 10){
+            let sliced =  value.latlng.split(', ');
+            let patient = {
+              position : value.address,
+              lat : parseFloat(sliced[0]),
+              lng : parseFloat(sliced[1]),
+              month : value.month,
+              day : value.day
+            }
+            let distance;
+            const getDistance  = {
+              lat : latitude,
+              lng : longitude,
+              _lat : patient.lat,
+              _lng : patient.lng
+            }
+            distance = PositionDistance(getDistance);
+            if(distance < 3600){
+              cnt = cnt+1;
+            }
+          }
+        });
+        setCountInCircle(cnt);
+        return cnt;
+      }).then((cnt) => {
+          // let [PatientInfo, count]= MakeInfectedArray(latitude, longitude);
+          setCountInCircle(cnt);          // ee
 
+          conditions = getCondition(cnt); // ee
+          setFace(conditions.conditionFace);
+          setCondition(conditions.conditionTxt);
+          setbgColor([conditions.conditionBgColor,conditions.conditionBgColor]);
+      })
     } catch (error) {
-      Alert.alert("Can't find you.", "So sad");
+      Alert.alert("이런!", "위치 정보를 얻어오지 못 하였습니다");
+      console.log('err,', error);
     }
   };
 
