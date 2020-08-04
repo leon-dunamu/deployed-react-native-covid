@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Fontisto } from '@expo/vector-icons';
 
-export default function BottomNav({navigation}) {
+export default function BottomNav() {
     const _OnPressGetPos = () => {
         Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#');
     }
@@ -14,9 +13,6 @@ export default function BottomNav({navigation}) {
             <View style={styles.constainer}>
                 <Text onPress={_OnPressGetPos}  style={styles.btnReload}>
                     <MaterialCommunityIcons name="web" size={40} color="white" />
-                </Text>
-                <Text onPress={()=>navigation.navigate('Map')} style={styles.btnToMap}>
-                    <Fontisto name="map" size={35} color="white" />
                 </Text>
             </View>
         </>

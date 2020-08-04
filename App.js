@@ -5,7 +5,7 @@ import * as Location from "expo-location";
 import { LinearGradient } from "expo-linear-gradient";
 import Index from './components/alimi/Index';
 import BottomNav from './components/alimi/BottomNav';
-import Map from './components/map/Map';
+import Map from './components/Tips/Tips';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -25,7 +25,7 @@ export default function App() {
             component={Index} />
           <Stack.Screen 
             options = {{
-              title : '지도'
+              title : 'Tip'
             }}
             name="Map"
             component={Map} />

@@ -23,8 +23,6 @@ import OtherRegion from './OtherRegion';
 
 
 import BottomNav from './BottomNav';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Fontisto } from '@expo/vector-icons';
 
 
 let conditions ;
@@ -65,9 +63,6 @@ export default function Index({navigation}) {
       Alert.alert("Can't find you.", "So sad");
     }
   };
-  const _OnPressGetPos = () => {
-    Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#');
-  }
 
   useEffect(() => {
     getLocation();
@@ -83,14 +78,14 @@ export default function Index({navigation}) {
               style={[styles.wrapper]}>
             <StatusBar barStyle="light-content"/>
             {/* it shows top navigation bar */}
-            <TopNav />
+            <TopNav navigation={navigation}/>
             {/* it shows address where you are in */}
             <MyAddress myAddr={myAddr} />
             {/* it shows face about condition of your region */}
             <Status face={face} condition={condition} CountInCircle={CountInCircle} />
             <OtherRegion />
             {/* it shows bottom navigation bar */}
-             <BottomNav navigation={navigation}/>
+             <BottomNav />
           </LinearGradient>
       }
     </>
