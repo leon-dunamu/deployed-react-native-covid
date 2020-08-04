@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     marginBottom : 10,
     padding : 0,
     textAlign : "center",
-    fontSize : 22,
+    fontSize : 35,
     color : "white",
     fontWeight : 'bold',
     textShadowColor: '#000',
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 12
   },
   addr : {
-    flex : 2,
+    flex : 5,
+    marginTop : 10,
   },
 })

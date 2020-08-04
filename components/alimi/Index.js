@@ -49,7 +49,7 @@ export default function Index({navigation}) {
       }
       console.log(latitude,longitude);
       const myad = await Location.reverseGeocodeAsync(myLocation);
-      setmyAddr(`${myad[0].city}  ${myad[0].street}  ${myad[0].name}`);
+      setmyAddr(`${myad[0].city}  ${myad[0].street}`);
 
       let [PatientInfo, count]= MakeInfectedArray(latitude, longitude);
       setCountInCircle(count);
@@ -76,9 +76,9 @@ export default function Index({navigation}) {
         : <LinearGradient 
               colors={bgColor} 
               style={[styles.wrapper]}>
-            <StatusBar barStyle="light-content"/>
+              <StatusBar translucent backgroundColor="transparent" />
             {/* it shows top navigation bar */}
-            <TopNav />
+            {/* <TopNav /> */}
             {/* it shows address where you are in */}
             <MyAddress myAddr={myAddr} />
             {/* it shows face about condition of your region */}

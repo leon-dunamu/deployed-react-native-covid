@@ -10,6 +10,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import About from './components/alimi/OtherAbout';
 import m1 from './components/alimi/OtherMenu';
 const Stack = createStackNavigator();
 
@@ -37,6 +38,12 @@ export default function App() {
           }}
           name="m1"
           component={m1} />
+          <Stack.Screen 
+          options = {{
+            title : 'ABOUT',
+          }}
+          name="about"
+          component={About} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

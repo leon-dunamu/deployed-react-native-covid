@@ -11,7 +11,7 @@ export default function StatusSentence(props) {
         <>
             {/* it shows the patients number around you */}
             <View style={styles.countSentence}>
-                <Text style={styles.countSentenceTxt}>주변 코로나 확진자 수 : {props.CountInCircle}</Text>
+                <Text style={styles.countSentenceTxt}>주변 확진자 수 :  {props.CountInCircle} 명</Text>
             </View>
         </>
     );
@@ -22,13 +22,14 @@ const styles = StyleSheet.create({
         flex : 2,
         textAlign : "center",
         textAlignVertical : "center",
+        marginBottom : 30,
     },
       countSentenceTxt : {
         flex : 1,
         textAlign : "center",
         textAlignVertical : "top",
         marginTop : 10,
-        fontSize : 24,
+        fontSize : 18,
         color : "white",
         textShadowColor: '#000',
         textShadowOffset: { width: 0, height: 0 },

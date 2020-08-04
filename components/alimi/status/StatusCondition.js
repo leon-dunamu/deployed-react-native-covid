@@ -19,7 +19,7 @@ export default function StatusCondition(props){
 
 const styles = StyleSheet.create({
     constainer : {
-        flex : 2,
+        flex : 3,
         margin : 0,
         marginTop : 0,
         padding : 0,

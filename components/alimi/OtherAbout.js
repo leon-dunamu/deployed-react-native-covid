@@ -1,35 +1,46 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet,Linking } from 'react-native';
+import { Link } from '@react-navigation/native';
 
-export default function OtherMenu({navigation}){
+export default function OtherAbout(){
     return(
         <>
             <View style={styles.circleWrapper}>
                 <View style={styles.circleMenu}>
-                    <Text style={[styles.txt, styles.txtLH]}
-                        onPress={()=> 
-                            Linking.openURL('http://ncov.mohw.go.kr/')
-                        }
-                    >COVID19</Text>
+                    <Text 
+                        style={[styles.txt, styles.txtLH]}
+                        onPress={()=> Linking.openURL('https://www.notion.so/a4037a8ca4c54fc2a52f259ccb86b4be')}
+                    >
+                        DOCS
+                    </Text>
                 </View>
                 <View style={styles.circleMenu}>
                     <Text style={[styles.txt, styles.txtRH]}
-                        onPress={()=> 
-                            Linking.openURL('http://www.cdc.go.kr/')
-                        }
-                    >질병관리부</Text>
+                        onPress={()=> Linking.openURL('mailto:dnjstjr31@gmail.com')}
+                    >
+                        MAIL
+                    </Text>
                 </View>
             </View>
             <View style={styles.circleWrapper}>
                 <View style={styles.circleMenu}>
-                    <Text style={[styles.txt, styles.txtLB]}
+                    <Text 
+                        style={[styles.txt, styles.txtLB]}
                         onPress={()=> 
-                            Linking.openURL('http://www.mohw.go.kr/react/index.jsp')
+                            Linking.openURL('https://www.data.go.kr/ugs/selectPortalInfoView.do')
                         }
-                    >보건복지부</Text>
+                    >
+                        공공데이터
+                    </Text>
                 </View>
                 <View style={styles.circleMenu}>
-                    <Text onPress={() => navigation.navigate('about')} style={[styles.txt, styles.txtRB]}>ABOUT</Text>
+                    <Text style={[styles.txt, styles.txtRB]}
+                        onPress={()=> 
+                            Linking.openURL('https://github.com/1Seok2/react-native-covid')
+                        }
+                    >
+                        GITHUB
+                    </Text>
                 </View>
             </View>
         </>
@@ -72,20 +83,21 @@ const styles = StyleSheet.create({
     txtLH : {
         marginTop : "66%",
         marginLeft : "20%",
+        backgroundColor : '#BDC581',
     },
     txtLB : {
         marginTop : "33%",
         marginLeft : "20%",
-        backgroundColor : '#05c46b',
+        backgroundColor : '#3c40c6',
     },
     txtRH : {
         marginTop : "66%",
         marginLeft : "17%",
-        backgroundColor : '#9c88ff',
+        backgroundColor : '#ED4C67',
     },
     txtRB : {
         marginTop : "33%",
         marginLeft : "17%",
-        backgroundColor : '#fa983a',
+        backgroundColor : '#485460',
     }
 })
