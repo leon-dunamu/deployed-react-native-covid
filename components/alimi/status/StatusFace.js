@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     flex : 1,
     fontSize : 200,
     textAlign : "center",
+    textAlignVertical : "center",
     color : "white",
     textShadowColor: '#444',
     textShadowOffset: { width: 0, height: 0 },

@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
-export default function BottomNav() {
+export default function BottomNav({navigation}) {
     const _OnPressGetPos = () => {
         Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#');
     }
@@ -11,9 +13,18 @@ export default function BottomNav() {
         <>
             {/* it shows bottom navigation bar */}
             <View style={styles.constainer}>
-                <Text onPress={_OnPressGetPos}  style={styles.btnReload}>
-                    <MaterialCommunityIcons name="web" size={40} color="white" />
-                </Text>
+                <View style={styles.menus}>
+                    <AntDesign onPress={()=>navigation.navigate('Map')} style={styles.tips} name="questioncircle"/>
+                    <Text style={styles.txt}>Tips</Text>
+                </View>
+                <View style={styles.menus}>
+                    <MaterialCommunityIcons onPress={_OnPressGetPos}  name="web" style={styles.btnReload}/>
+                    <Text style={styles.txt}>Web</Text>
+                </View>
+                <View style={styles.menus}>
+                    <Feather onPress={()=>navigation.navigate('m1')} style={styles.hamburger} name="menu" />
+                    <Text style={styles.txt}>Other</Text>
+                </View>
             </View>
         </>
     );
@@ -21,33 +32,39 @@ export default function BottomNav() {
 
 const styles = StyleSheet.create({
     constainer : {
-        flex : 2,
+        backgroundColor : '#dcdde1',
+        flex : 1.4,
         flexDirection : "row",
-        margin : 0,
-        padding : 0,
-        marginLeft : 20,
-        marginRight : 25,
-        marginBottom : 20,
         shadowColor: "#000",
     },
+    menus : {
+        flex : 1,
+    },  
+    txt : {
+        flex : 1,
+        fontSize : 10,
+        marginBottom : 5,
+        textAlign : "center",
+    },
     btnReload : {
-        flex : 1,
-        margin : 0,
-        padding : 0,
-        textAlign : "left",
-        textAlignVertical : "center",
-        textShadowColor: '#000',
-        textShadowOffset: { width: 0, height: 0 },
-        textShadowRadius: 12
+        flex : 3,
+        color : '#2f3640',
+        fontSize : 30,
+        textAlign : "center",
+        textAlignVertical : "bottom",
     },
-    btnToMap : {
-        flex : 1,
-      margin : 0,
-      padding : 0,
-      textAlign : "right",
-      textAlignVertical : "center",
-      textShadowColor: '#000',
-      textShadowOffset: { width: 0, height: 0 },
-      textShadowRadius: 12
+    tips : {
+      flex : 3,
+      fontSize : 25,
+      color : "#2f3640",
+      textAlign : "center",
+      textAlignVertical : "bottom",
     },
+    hamburger : {
+        flex : 3,
+        fontSize : 30,
+        color : "#2f3640",
+        textAlign : "center",
+        textAlignVertical : "bottom",
+    }
 })

@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
       textShadowRadius: 12
     },
     rowList : {
-      width : 80,
+      marginLeft : 10,
+      width : 50,
     },
 })

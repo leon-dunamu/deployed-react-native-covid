@@ -78,14 +78,14 @@ export default function Index({navigation}) {
               style={[styles.wrapper]}>
             <StatusBar barStyle="light-content"/>
             {/* it shows top navigation bar */}
-            <TopNav navigation={navigation}/>
+            <TopNav />
             {/* it shows address where you are in */}
             <MyAddress myAddr={myAddr} />
             {/* it shows face about condition of your region */}
             <Status face={face} condition={condition} CountInCircle={CountInCircle} />
             <OtherRegion />
             {/* it shows bottom navigation bar */}
-             <BottomNav />
+             <BottomNav navigation={navigation}/>
           </LinearGradient>
       }
     </>

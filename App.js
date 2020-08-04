@@ -1,14 +1,16 @@
 // import { StatusBar } from 'expo-status-bar';
 import React,{ useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Alert, ScrollView,StatusBar } from 'react-native';
+import { StyleSheet, Button, View, Alert, ScrollView,StatusBar } from 'react-native';
 import * as Location from "expo-location";
 import { LinearGradient } from "expo-linear-gradient";
 import Index from './components/alimi/Index';
 import BottomNav from './components/alimi/BottomNav';
-import Map from './components/Tips/Tips';
+import Tips from './components/Tips/Tips';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import m1 from './components/alimi/OtherMenu';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -25,12 +27,20 @@ export default function App() {
             component={Index} />
           <Stack.Screen 
             options = {{
-              title : 'Tip'
+              title : 'Tips'
             }}
             name="Map"
-            component={Map} />
+            component={Tips} />
+          <Stack.Screen 
+          options = {{
+            title : '다른 메뉴',
+          }}
+          name="m1"
+          component={m1} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 }
+
+

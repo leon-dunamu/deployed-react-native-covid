@@ -46,11 +46,12 @@ export default function OtherRegion() {
 const styles = StyleSheet.create({
 
   rowList : {
-    width : 80,
+    width : 60,
   },
   other : {
     flex : 3,
     flexDirection : "row",
+    marginBottom : 20,
   },
   otherTxt : {
     flex : 1,

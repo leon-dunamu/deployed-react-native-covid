@@ -20,7 +20,9 @@ export default function MyAddress(props){
 const styles = StyleSheet.create({
   text : {
     flex : 1,
+    textAlignVertical : "bottom",
     margin : 0,
+    marginBottom : 10,
     padding : 0,
     textAlign : "center",
     fontSize : 22,
