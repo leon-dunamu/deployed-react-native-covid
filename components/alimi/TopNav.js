@@ -7,7 +7,7 @@ export default function TopNav() {
         <>
             {/* it shows top navigation bar */}
             <View style={styles.constainer}>
-                <Feather style={styles.text} name="menu" />
+                {/* <Feather style={styles.text} name="menu" /> */}
             </View>
         </>
     )
@@ -15,7 +15,7 @@ export default function TopNav() {
 
 const styles = StyleSheet.create({
     constainer : {
-      flex : 3,
+      flex : 2,
       margin : 0,
       padding : 0,
     },
@@ -28,5 +28,8 @@ const styles = StyleSheet.create({
       marginTop : 20,
       fontSize : 40,
       color : "white",
+      textShadowColor: '#000',
+      textShadowOffset: { width: 0, height: 0 },
+      textShadowRadius: 12
     },
 })

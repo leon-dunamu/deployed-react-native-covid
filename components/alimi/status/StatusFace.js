@@ -33,12 +33,15 @@ const styles = StyleSheet.create({
     margin : 0,
     padding : 0,
     textAlign : "center",
-    marginBottom :10
+    marginBottom :10,
   },
   faceText : {
     flex : 1,
     fontSize : 200,
     textAlign : "center",
     color : "white",
+    textShadowColor: '#444',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 12
   },
 })

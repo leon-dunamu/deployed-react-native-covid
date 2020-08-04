@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
       textAlignVertical :"center",
       color : 'white',
       marginTop : 20,
+      textShadowColor: '#000',
+      textShadowOffset: { width: 0, height: 0 },
+      textShadowRadius: 12
     },
     rowListDesc : {
       textAlign : "center",
@@ -34,7 +37,10 @@ const styles = StyleSheet.create({
       fontSize : 25,
       marginTop : 5,
       marginBottom : 30,
-      fontWeight : "bold"
+      fontWeight : "bold",
+      textShadowColor: '#000',
+      textShadowOffset: { width: 0, height: 0 },
+      textShadowRadius: 12
     },
     rowList : {
       width : 80,

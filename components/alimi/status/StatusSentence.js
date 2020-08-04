@@ -30,6 +30,9 @@ const styles = StyleSheet.create({
         marginTop : 10,
         fontSize : 24,
         color : "white",
+        textShadowColor: '#000',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 12
     }
 })
 

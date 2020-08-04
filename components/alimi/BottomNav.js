@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 
-export default function BottomNav() {
+export default function BottomNav({navigation}) {
     const _OnPressGetPos = () => {
         Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#');
     }
@@ -15,7 +15,7 @@ export default function BottomNav() {
                 <Text onPress={_OnPressGetPos}  style={styles.btnReload}>
                     <MaterialCommunityIcons name="web" size={50} color="white" />
                 </Text>
-                <Text style={styles.btnToMap}>
+                <Text onPress={()=>navigation.navigate('Map')} style={styles.btnToMap}>
                     <Fontisto name="map" size={50} color="white" />
                 </Text>
             </View>
@@ -39,7 +39,10 @@ const styles = StyleSheet.create({
         margin : 0,
         padding : 0,
         textAlign : "left",
-        textAlignVertical : "center"
+        textAlignVertical : "center",
+        textShadowColor: '#000',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 12
     },
     btnToMap : {
         flex : 1,
@@ -47,5 +50,8 @@ const styles = StyleSheet.create({
       padding : 0,
       textAlign : "right",
       textAlignVertical : "center",
+      textShadowColor: '#000',
+      textShadowOffset: { width: 0, height: 0 },
+      textShadowRadius: 12
     },
 })

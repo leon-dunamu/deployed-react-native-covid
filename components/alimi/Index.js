@@ -23,11 +23,13 @@ import OtherRegion from './OtherRegion';
 
 
 import BottomNav from './BottomNav';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
 
 
 let conditions ;
 
-export default function Index() {
+export default function Index({navigation}) {
   const [isLoading, setisLoading] = useState(true);
   const [myAddr, setmyAddr] = useState('0');
   const [CountInCircle,setCountInCircle] = useState(0);
@@ -44,8 +46,8 @@ export default function Index() {
       } = await Location.getCurrentPositionAsync();
       setisLoading(false);
       const myLocation = {
-        latitude : latitude,        // to change "latitude"
-        longitude : longitude       // to change "longitude"
+        latitude : 37.413294,        // to change "latitude"
+        longitude : 127.269311       // to change "longitude"
       }
       console.log(latitude,longitude);
       const myad = await Location.reverseGeocodeAsync(myLocation);
@@ -63,6 +65,9 @@ export default function Index() {
       Alert.alert("Can't find you.", "So sad");
     }
   };
+  const _OnPressGetPos = () => {
+    Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#');
+  }
 
   useEffect(() => {
     getLocation();
@@ -85,7 +90,7 @@ export default function Index() {
             <Status face={face} condition={condition} CountInCircle={CountInCircle} />
             <OtherRegion />
             {/* it shows bottom navigation bar */}
-            <BottomNav />
+             <BottomNav navigation={navigation}/>
           </LinearGradient>
       }
     </>
@@ -101,5 +106,34 @@ const styles = StyleSheet.create({
     textAlign : "center",
     textAlignVertical : "center",
     backgroundColor : "#1289A7"
-  },
+  },constainer : {
+    flex : 2,
+    flexDirection : "row",
+    margin : 0,
+    padding : 0,
+    marginLeft : 25,
+    marginRight : 25,
+    marginBottom : 20,
+    shadowColor: "#000",
+},
+btnReload : {
+    flex : 1,
+    margin : 0,
+    padding : 0,
+    textAlign : "left",
+    textAlignVertical : "center",
+    textShadowColor: '#000',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 12
+},
+btnToMap : {
+    flex : 1,
+  margin : 0,
+  padding : 0,
+  textAlign : "right",
+  textAlignVertical : "center",
+  textShadowColor: '#000',
+  textShadowOffset: { width: 0, height: 0 },
+  textShadowRadius: 12
+},
 })
