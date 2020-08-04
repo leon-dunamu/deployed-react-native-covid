@@ -1,9 +1,3 @@
-// interface DistanceProps {
-//     lat : number,
-//     lng : number,
-//     _lat : number,
-//     _lng : number
-// }
 
 const PositionDistance = (props) => {
 

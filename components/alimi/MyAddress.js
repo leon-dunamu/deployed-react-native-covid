@@ -1,9 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-// interface MyAddressProp{
-//     myAddr : string
-// }
 
 export default function MyAddress(props){
 

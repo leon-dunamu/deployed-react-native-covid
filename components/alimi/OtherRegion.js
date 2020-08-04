@@ -3,7 +3,6 @@ import { StyleSheet ,View, Text, ScrollView } from 'react-native';
 import getOtherRegion from './getLocation/GetOtherRegion';
 import ShowRegion from './publicData/ShowRegion';
 import { MaterialIcons } from '@expo/vector-icons';
-const parseString = require('react-native-xml2js').parseString;
 
 
 

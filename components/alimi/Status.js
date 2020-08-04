@@ -4,11 +4,6 @@ import StatusCondition from './status/StatusCondition';
 import StatusSentence from './status/StatusSentence';
 import StatusRandomSentence from './status/StatusRandom';
 
-// interface StatusProps {
-//     face : string,
-//     condition : string,
-//     CountInCircle : number
-// }
 
 export default function Status(props){
     return(

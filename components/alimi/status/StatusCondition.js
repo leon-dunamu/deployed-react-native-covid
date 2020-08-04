@@ -1,9 +1,6 @@
 import React from 'react';
 import { StyleSheet,View, Text } from 'react-native';
 
-// interface StatusConditionProps {
-//     condition : string
-// }
 
 export default function StatusCondition(props){
     

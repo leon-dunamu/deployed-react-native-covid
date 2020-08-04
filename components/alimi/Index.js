@@ -5,7 +5,6 @@ import * as Location from "expo-location";
 import { LinearGradient } from "expo-linear-gradient";
 
 // make json to array
-import MakeInfectedArray from './publicData/MakeInfectedArray';
 import DateGapAcumulator from './make/DateGapAcumulator';
 import PositionDistance from './make/PositionDistance';
 
@@ -13,7 +12,7 @@ import PositionDistance from './make/PositionDistance';
 import Loading from '../Loading/Loading';
 
 // top navigation
-import TopNav from './TopNav';
+// import TopNav from './TopNav';
 
 // showing address
 import MyAddress from './MyAddress';

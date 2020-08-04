@@ -1,8 +1,7 @@
-import React,{ useEffect, useState } from 'react';
+
 import Patient from '../../../InfectedData.json';
 import DateGapAcumulator from '../make/DateGapAcumulator';
 import PositionDistance from '../make/PositionDistance';
-import axios from 'axios';
 
 let Count = 0;
 const JSON_URL = 'https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/2020-08-04/covid';

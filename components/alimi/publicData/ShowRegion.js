@@ -1,11 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-// interface ShowRegionProps {
-//   reginf : string,
-//   region : string
-// }
-
 const ShowRegion = (props) => {
     return (
       <>

@@ -1,5 +1,5 @@
-import React,{ useState, useEffect } from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
 export default function Loading () {
     return (

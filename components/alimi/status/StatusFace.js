@@ -3,11 +3,6 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-// interface StatusFaceProps {
-//   face : string,
-// }
-
-//  emoticon-devil-outline
 
 export default function StatusFace(props){
   return (

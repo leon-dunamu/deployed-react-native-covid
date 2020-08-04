@@ -1,9 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Alert } from 'react-native';
 
-// interface StatusSentenceProps {
-//     CountInCircle : number
-// }
 
 export default function StatusRandomSentence(props) {
     const GoodSentences = [

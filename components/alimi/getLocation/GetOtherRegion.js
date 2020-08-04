@@ -4,7 +4,7 @@ const parseString = require('react-native-xml2js').parseString;
 const NowTime = GetNowTime();
 const API_KEY = 'SEOYVH3u6G%2Fr9VXcn%2B%2Fo84OWhpuvTIOOnXXU1PpL1ngVmTjrBcMf2cyDFwoogj63QmD3X5TGAG5SzOv3vDASbQ%3D%3D';
 const URL = `http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?serviceKey=${API_KEY}&pageNo=1&numOfRows=10&startCreateDt=${NowTime}&endCreateDt=${NowTime}`
-let DOMParser = require('xmldom').DOMParser;
+
 
 
 const GetOtherRegion = () => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet,Linking } from 'react-native';
-import { Link } from '@react-navigation/native';
 
 export default function OtherAbout(){
     return(
