@@ -35,7 +35,7 @@ export default function OtherAbout(){
                 <View style={styles.circleMenu}>
                     <Text style={[styles.txt, styles.txtRB]}
                         onPress={()=> 
-                            Linking.openURL('https://github.com/1Seok2/react-native-covid')
+                            Linking.openURL('https://github.com/1Seok2/deployed-react-native-covid')
                         }
                     >
                         GITHUB
