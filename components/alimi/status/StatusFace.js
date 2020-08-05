@@ -24,7 +24,7 @@ export default function StatusFace(props){
 
 const styles = StyleSheet.create({
   face : {
-    flex : 9,
+    flex : 10,
     margin : 0,
     padding : 0,
     textAlign : "center",

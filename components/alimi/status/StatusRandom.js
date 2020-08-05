@@ -5,10 +5,10 @@ import { StyleSheet, Text, View, Alert } from 'react-native';
 export default function StatusRandomSentence(props) {
     const GoodSentences = [
         "이 주변은 청정지역 !",
-        "개인위생 지켜주시며 다니세요",
+        "개인위생을 지켜주세요",
         "밀린 장을 보러 가볼까요 ?",
         "친목 때도 조심 ! 아시죠 ?",
-        "사회적 거리두기는 지켜주세요",
+        "사회적 거리두기를 지켜주세요",
         "미뤄뒀던 미용실을 가볼까요 ?",
         "그래도 실내는 언제나 조심 !",
         "미뤄뒀던 일들을 해결하죠 !"
@@ -65,7 +65,7 @@ export default function StatusRandomSentence(props) {
 
 const styles = StyleSheet.create({
     countSentence : {
-        flex : 2,
+        flex : 1.6,
         textAlign : "center",
         textAlignVertical : "center",
     },

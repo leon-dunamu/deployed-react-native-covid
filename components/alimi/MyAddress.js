@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-
 export default function MyAddress(props){
-
     return (
         <>
             {/* it shows address where you are in */}
@@ -27,7 +25,8 @@ const styles = StyleSheet.create({
     fontWeight : 'bold',
     textShadowColor: '#000',
     textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 6
+    textShadowRadius: 6,
+    fontFamily : 'BMHANNAAir_otf'
   },
   addr : {
     flex : 5,

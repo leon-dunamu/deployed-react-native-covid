@@ -16,7 +16,7 @@ export default function StatusSentence(props) {
 
 const styles = StyleSheet.create({
     countSentence : {
-        flex : 2,
+        flex : 1.5,
         textAlign : "center",
         textAlignVertical : "center",
         marginBottom : 30,

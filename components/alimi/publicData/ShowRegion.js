@@ -16,28 +16,27 @@ export default ShowRegion;
 
 const styles = StyleSheet.create({
     rowListTitle : {
-      flex : 2,
       fontSize : 20,
       textAlign : "center",
-      textAlignVertical :"center",
       color : 'white',
       marginTop : 20,
       textShadowColor: '#000',
       textShadowOffset: { width: 0, height: 0 },
-      textShadowRadius: 12
+      textShadowRadius: 7
     },
     rowListDesc : {
       textAlign : "center",
       color : 'white',
       fontSize : 25,
       marginTop : 5,
-      marginBottom : 30,
+      marginBottom : 0,
       fontWeight : "bold",
       textShadowColor: '#000',
       textShadowOffset: { width: 0, height: 0 },
-      textShadowRadius: 12
+      textShadowRadius: 7
     },
     rowList : {
+      flex : 4,
       marginLeft : 10,
       width : 50,
     },

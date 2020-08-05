@@ -12,7 +12,7 @@ import PositionDistance from './make/PositionDistance';
 import Loading from '../Loading/Loading';
 
 // top navigation
-// import TopNav from './TopNav';
+import TopNav from './TopNav';
 
 // showing address
 import MyAddress from './MyAddress';
@@ -22,8 +22,9 @@ import Status from './Status';
 import getCondition from './getLocation/GetCondition';
 import OtherRegion from './OtherRegion';
 
-
+// tips, web, other
 import BottomNav from './BottomNav';
+
 
 
 let conditions ;
@@ -66,7 +67,7 @@ export default function Index({navigation}) {
             _date : value.day
           }
           daysGap = DateGapAcumulator(curDay);
-          if(daysGap <= 10){
+          if(daysGap <= 14){
             let sliced =  value.latlng.split(', ');
             let patient = {
               position : value.address,
@@ -83,7 +84,7 @@ export default function Index({navigation}) {
               _lng : patient.lng
             }
             distance = PositionDistance(getDistance);
-            if(distance < 3600){
+            if(distance < 4800){
               cnt = cnt+1;
             }
           }
@@ -117,9 +118,10 @@ export default function Index({navigation}) {
         : <LinearGradient 
               colors={bgColor} 
               style={[styles.wrapper]}>
-              <StatusBar translucent backgroundColor="transparent" />
+            {/* <StatusBar translucent backgroundColor="transparent" /> */}
+            <StatusBar barStyle="light-content" />
             {/* it shows top navigation bar */}
-            {/* <TopNav /> */}
+            <TopNav />
             {/* it shows address where you are in */}
             <MyAddress myAddr={myAddr} />
             {/* it shows face about condition of your region */}
@@ -137,39 +139,4 @@ const styles = StyleSheet.create({
   wrapper : {
     flex : 1,
   },
-  loading : {
-    flex : 1,
-    textAlign : "center",
-    textAlignVertical : "center",
-    backgroundColor : "#1289A7"
-  },constainer : {
-    flex : 2,
-    flexDirection : "row",
-    margin : 0,
-    padding : 0,
-    marginLeft : 25,
-    marginRight : 25,
-    marginBottom : 20,
-    shadowColor: "#000",
-},
-btnReload : {
-    flex : 1,
-    margin : 0,
-    padding : 0,
-    textAlign : "left",
-    textAlignVertical : "center",
-    textShadowColor: '#000',
-    textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 12
-},
-btnToMap : {
-    flex : 1,
-  margin : 0,
-  padding : 0,
-  textAlign : "right",
-  textAlignVertical : "center",
-  textShadowColor: '#000',
-  textShadowOffset: { width: 0, height: 0 },
-  textShadowRadius: 12
-},
 })

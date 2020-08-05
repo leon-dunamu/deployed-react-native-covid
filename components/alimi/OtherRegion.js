@@ -32,7 +32,7 @@ export default function OtherRegion() {
                 <Text style={{fontSize : 17, color:'white',
                     textShadowColor: '#000',
                     textShadowOffset: { width: 0, height: 0 },
-                    textShadowRadius: 12}}
+                    textShadowRadius: 12,}}
                 > 신규 확진자 수</Text>
             </View>
             <ScrollView horizontal={true}>
@@ -59,23 +59,24 @@ export default function OtherRegion() {
 
 const styles = StyleSheet.create({
     title : {
-        marginTop : 10,
-        flex:0.3,
+        marginTop : 0,
+        flex:0.5,
         flexDirection : 'row',
-        alignItems : 'center',
+        alignItems : 'flex-start',
         marginLeft : 15,
+        marginBottom : 10
     },
   rowList : {
     width : 60,
   },
   other : {
-    flex : 3,
+    flex : 4,
     flexDirection : "row",
     marginBottom : 8,
   },
   otherTxt : {
     flex : 1,
     textAlign :"center",
-    textAlignVertical : "center"
+    textAlignVertical : "center",
   },
 })
