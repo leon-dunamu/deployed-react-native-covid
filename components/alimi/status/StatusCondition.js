@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet,View, Text } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 export default function StatusCondition(props){
@@ -7,29 +8,32 @@ export default function StatusCondition(props){
     return (
         <>
             {/* it shows sentence about condition of your region */}
-            <View style={styles.constainer}>
-                <Text style={styles.conditionTxt}>{props.condition}</Text>
+            <View style={styles.Sconstainer}>
+                { props.condition === 'Error' ? 
+                        <MaterialCommunityIcons 
+                        style={styles.conditionTxt} 
+                        name="reload" 
+                        size={24} 
+                        color="white" 
+                        onPress={props.getLocation}
+                        />
+                    :   <Text style={styles.conditionTxt}>{props.condition}</Text>
+                }
             </View>
         </>
     )
 }
 
 const styles = StyleSheet.create({
-    constainer : {
-        flex : 3,
-        margin : 0,
-        marginTop : 0,
-        padding : 0,
-    },
     conditionTxt : {
-        flex : 1,
-        fontSize : 40,
-        textAlign : "center",
-        textAlignVertical : "bottom",
-        color : "white",
-        fontWeight : 'bold',
-        textShadowColor: '#000',
-        textShadowOffset: { width: 0, height: 0 },
-        textShadowRadius: 6
+      marginTop : 10,
+      textAlign : "center",
+      textAlignVertical : "top",
+      fontSize : 20,
+      color : 'white',
+    },
+    Sconstainer : {
+      flex : 2.3,
+      marginTop : 10
     },
 })

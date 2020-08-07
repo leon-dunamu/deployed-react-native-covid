@@ -14,6 +14,8 @@
     "@react-navigation/stack": "^5.8.0",
     "axios": "^0.19.2",
     "expo": "^38.0.9",
+    "expo-ads-admob": "~8.2.1",
+    "expo-react-native-shadow": "^1.0.3",
     "expo-status-bar": "^1.0.2",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
@@ -24,16 +26,15 @@
     "react-native-screens": "~2.9.0",
     "react-native-web": "~0.11.7",
     "react-native-xml2js": "^1.0.3",
-    "react-navigation-drawer": "^2.5.0",
-    "expo-ads-admob": "~8.2.1"
+    "react-navigation-drawer": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "babel-preset-expo": "~8.1.0"
   },
   "private": true,
-  "name": "react-native-covid",
-  "version": "1.0.0",
+  "name": "코로나 지수",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/1Seok2/react-native-covid.git"

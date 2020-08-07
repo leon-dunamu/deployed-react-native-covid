@@ -1,19 +1,17 @@
 {
   "expo": {
-    "name": "react-native-covid",
+    "name": "코로나 지수",
     "slug": "react-native-covid",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon2.png",
     "splash": {
-      "image": "./assets/splash3.png",
+      "image": "./assets/splash5.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f9df84"
+      "backgroundColor": "#ffffff"
     },
     "android": {
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~2242242772"
-      }
+      "package": "com.ws.covid"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

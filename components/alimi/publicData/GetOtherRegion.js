@@ -18,8 +18,14 @@ const GetOtherRegion = () => {
             console.log('len',data.response.body[0].items[0].item.length);
             for(let i = 0; i<data.response.body[0].items[0].item.length; i++){
                 const rwi = {
-                    region : data.response.body[0].items[0].item[i].gubun[0],
-                    regInf : data.response.body[0].items[0].item[i].incDec[0]
+                    region : data.response.body[0].items[0].item[i].gubun[0],   // 지역
+                    defcnt : data.response.body[0].items[0].item[i].defCnt[0],  // 확진자수
+                    regInf : data.response.body[0].items[0].item[i].incDec[0],  // 전일대비
+                    isoing : data.response.body[0].items[0].item[i].isolIngCnt[0],   // 격리중
+                    isoclr : data.response.body[0].items[0].item[i].isolClearCnt[0], // 격리해제
+                    ofcnt : data.response.body[0].items[0].item[i].overFlowCnt[0],  // 해외유입
+                    lccnt : data.response.body[0].items[0].item[i].localOccCnt[0]   // 지역발생
+
                 }
                 _regWithInf = [..._regWithInf,rwi];
             }

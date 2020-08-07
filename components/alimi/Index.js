@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React,{ useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Alert, ScrollView,StatusBar } from 'react-native';
+import { StyleSheet, View, Alert, StatusBar } from 'react-native';
 import * as Location from "expo-location";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -12,18 +12,22 @@ import PositionDistance from './make/PositionDistance';
 import Loading from '../Loading/Loading';
 
 // top navigation
-import TopNav from './TopNav';
+import TopNav from './display/TopNav';
 
 // showing address
-import MyAddress from './MyAddress';
+import MyAddress from './display/MyAddress';
 
 // status about face, sentences, and other region in KR
-import Status from './Status';
+import ConditionAddrCount from './display/ConditionAddrCount';
+import StatusFace from './status/StatusFace';
+import StatueSentence from './status/StatusSentence';
+import StatusCondition from "./status/StatusCondition";
 import getCondition from './getLocation/GetCondition';
-import OtherRegion from './OtherRegion';
+import OtherRegion from './display/OtherRegion';
+import StatusRandomSentence from './status/StatusRandom';
 
 // tips, web, other
-import BottomNav from './BottomNav';
+import BottomNav from './display/BottomNav';
 
 
 
@@ -32,11 +36,11 @@ const JSON_URL = 'https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/20
 
 export default function Index({navigation}) {
   const [isLoading, setisLoading] = useState(true);
-  const [myAddr, setmyAddr] = useState('0');
+  const [myAddr, setmyAddr] = useState('cannot find');
   const [CountInCircle,setCountInCircle] = useState(0);
-  const [condition, setCondition] = useState('cannot finds you');
+  const [condition, setCondition] = useState('Error');
   const [face, setFace] = useState('emoji-happy');
-  const [bgColor, setbgColor] = useState(['0','0']);
+  const [bgColor, setbgColor] = useState(['#1289A7','#1289A7']);
   
 
   const getLocation = async () => {
@@ -59,7 +63,7 @@ export default function Index({navigation}) {
       .then(response => {return response.json()})
       .then(resp => {
         let cnt = 0;
-        resp.map((value) => {
+        resp.map((value) => { 
           let daysGap ;
           // daysGap = isInFewDays(value.month, value.day);
           const curDay = {
@@ -84,7 +88,7 @@ export default function Index({navigation}) {
               _lng : patient.lng
             }
             distance = PositionDistance(getDistance);
-            if(distance < 4800){
+            if(distance < 3600){
               cnt = cnt+1;
             }
           }
@@ -101,7 +105,7 @@ export default function Index({navigation}) {
           setbgColor([conditions.conditionBgColor,conditions.conditionBgColor]);
       })
     } catch (error) {
-      Alert.alert("이런!", "위치 정보를 얻어오지 못 하였습니다");
+      Alert.alert("이런! 위치 정보를 얻어오지 못 하였습니다", error);
       console.log('err,', error);
     }
   };
@@ -115,21 +119,34 @@ export default function Index({navigation}) {
       {
         isLoading ? 
           <Loading />
-        : <LinearGradient 
-              colors={bgColor} 
-              style={[styles.wrapper]}>
+        : <View style={styles.wrapper}>
             {/* <StatusBar translucent backgroundColor="transparent" /> */}
             <StatusBar barStyle="light-content" />
             {/* it shows top navigation bar */}
             <TopNav />
-            {/* it shows address where you are in */}
-            <MyAddress myAddr={myAddr} />
-            {/* it shows face about condition of your region */}
-            <Status face={face} condition={condition} CountInCircle={CountInCircle} />
+            <View style={styles.statusWrapper}>
+              <LinearGradient 
+                colors={bgColor}
+                style={{
+                  flexDirection : "row",
+                  flex: 10,
+                  margin : 18,
+                  borderRadius: 8,
+                }}
+              >
+                <View style={styles.faceWrapper}>
+                  <StatusFace face={face}/>
+                  {/* it shows sentence about condition of your region */}
+                  <StatusCondition getLocation={getLocation} condition={condition} />
+                </View>
+                <ConditionAddrCount myAddr={myAddr} CountInCircle={CountInCircle} />
+              </LinearGradient>
+              <StatusRandomSentence condition={condition}/>
+            </View>
             <OtherRegion />
             {/* it shows bottom navigation bar */}
-             <BottomNav navigation={navigation}/>
-          </LinearGradient>
+            <BottomNav navigation={navigation}/>
+          </View>
       }
     </>
   );
@@ -138,5 +155,25 @@ export default function Index({navigation}) {
 const styles = StyleSheet.create({
   wrapper : {
     flex : 1,
+  },
+  statusWrapper : {
+    flex : 2.6,
+  },
+  faceWrapper : {
+    flex : 1,
+  },
+  txtWrapper : {
+    flex : 2,
+  },
+  conditionTxt : {
+    marginTop : 10,
+    textAlign : "center",
+    textAlignVertical : "top",
+    fontSize : 20,
+    color : 'white',
+  },
+  Sconstainer : {
+    flex : 2.3,
+    marginTop : 10
   },
 })

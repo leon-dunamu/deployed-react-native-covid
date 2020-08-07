@@ -65,19 +65,17 @@ export default function StatusRandomSentence(props) {
 
 const styles = StyleSheet.create({
     countSentence : {
-        flex : 1.6,
+        flex : 2.2,
         textAlign : "center",
-        textAlignVertical : "center",
     },
       countSentenceTxt : {
-        flex : 1,
+        flex : 1.6,
         textAlign : "center",
-        textAlignVertical : "bottom",
         fontSize : 24,
-        color : "white",
+        color : "#2f3640",
         textShadowColor: '#000',
         textShadowOffset: { width: 0, height: 0 },
-        textShadowRadius: 6
+        textShadowRadius: 1
     }
 })
 

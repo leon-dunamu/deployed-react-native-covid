@@ -13,7 +13,7 @@ export default function Map(){
         <ScrollView>
             <AdMobBanner
                 bannerSize="fullBanner"
-                adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+                adUnitID="ca-app-pub-8028844409135703/8232936056" // Test ID, Replace with your-admob-unit-id
                 servePersonalizedAds // true or false
                 // onDidFailToReceiveAdWithError={bannerError}
             />

@@ -33,7 +33,7 @@ export default function BottomNav({navigation}) {
 const styles = StyleSheet.create({
     constainer : {
         backgroundColor : '#dcdde1',
-        flex : 2.2,
+        flex : 0.7,
         flexDirection : "row",
         shadowColor: "#000",
     },

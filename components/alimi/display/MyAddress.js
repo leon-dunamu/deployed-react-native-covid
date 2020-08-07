@@ -15,21 +15,15 @@ export default function MyAddress(props){
 const styles = StyleSheet.create({
   text : {
     flex : 1,
-    textAlignVertical : "bottom",
+    textAlignVertical : "center",
     margin : 0,
-    marginBottom : 10,
     padding : 0,
     textAlign : "center",
-    fontSize : 35,
+    fontSize : 28,
     color : "white",
     fontWeight : 'bold',
-    textShadowColor: '#000',
-    textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 6,
-    fontFamily : 'BMHANNAAir_otf'
   },
   addr : {
-    flex : 5,
-    marginTop : 10,
+    flex : 3.8,
   },
 })

@@ -1,8 +1,8 @@
 import React from 'react';
-import StatusFace from './status/StatusFace';
-import StatusCondition from './status/StatusCondition';
-import StatusSentence from './status/StatusSentence';
-import StatusRandomSentence from './status/StatusRandom';
+import StatusFace from './StatusFace';
+import StatusCondition from './StatusCondition';
+import StatusSentence from './StatusSentence';
+import StatusRandomSentence from './StatusRandom';
 
 
 export default function Status(props){

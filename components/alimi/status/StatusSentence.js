@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Alert } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 
 
 export default function StatusSentence(props) {
@@ -16,21 +16,16 @@ export default function StatusSentence(props) {
 
 const styles = StyleSheet.create({
     countSentence : {
-        flex : 1.5,
-        textAlign : "center",
-        textAlignVertical : "center",
-        marginBottom : 30,
+      flex : 2,
+      textAlign : "center",
+      marginBottom : 13
     },
-      countSentenceTxt : {
-        flex : 1,
-        textAlign : "center",
-        textAlignVertical : "top",
-        marginTop : 10,
-        fontSize : 18,
-        color : "white",
-        textShadowColor: '#000',
-        textShadowOffset: { width: 0, height: 0 },
-        textShadowRadius: 12
-    }
+    countSentenceTxt : {
+      flex : 1,
+      textAlign : "center",
+      textAlignVertical : "bottom",
+      fontSize : 21,
+      color : "white",
+    },
 })
 
