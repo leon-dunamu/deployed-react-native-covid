@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
     fontWeight : 'bold',
   },
   addr : {
-    flex : 3.8,
+    flex : 8,
   },
 })

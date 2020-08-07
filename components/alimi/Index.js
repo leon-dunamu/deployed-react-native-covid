@@ -14,13 +14,9 @@ import Loading from '../Loading/Loading';
 // top navigation
 import TopNav from './display/TopNav';
 
-// showing address
-import MyAddress from './display/MyAddress';
-
 // status about face, sentences, and other region in KR
 import ConditionAddrCount from './display/ConditionAddrCount';
 import StatusFace from './status/StatusFace';
-import StatueSentence from './status/StatusSentence';
 import StatusCondition from "./status/StatusCondition";
 import getCondition from './getLocation/GetCondition';
 import OtherRegion from './display/OtherRegion';
@@ -48,7 +44,7 @@ export default function Index({navigation}) {
       await Location.requestPermissionsAsync();
       const {
         coords: { latitude, longitude }
-      } = await Location.getCurrentPositionAsync();
+      } = await Location.getLastKnownPositionAsync(); // getCurrentPositionAsync
       setisLoading(false);
       const myLocation = {
         latitude : latitude,        // to change "latitude"
@@ -112,7 +108,7 @@ export default function Index({navigation}) {
 
   useEffect(() => {
     getLocation();
-  },[]);
+  },[myAddr]);
 
   return (
     <>
@@ -160,7 +156,7 @@ const styles = StyleSheet.create({
     flex : 2.6,
   },
   faceWrapper : {
-    flex : 1,
+    flex : 1.2,
   },
   txtWrapper : {
     flex : 2,

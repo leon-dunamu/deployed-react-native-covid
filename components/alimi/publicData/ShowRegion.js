@@ -4,11 +4,11 @@ import { LinearGradient } from "expo-linear-gradient";
 
 const ShowRegion = (props) => {
   let conditionBgColor = ['#1289A7','#1289A7'];
-  if(1 <= props.reginf && props.reginf <= 4) {
+  if(1 <= props.lccnt && props.lccnt <= 4) {
     conditionBgColor = ['#009432','#009432'];
-  } else if ( 5 <= props.reginf && props.reginf <= 9 ){
+  } else if ( 5 <= props.lccnt && props.lccnt <= 9 ){
     conditionBgColor = ['#cc8e35','#cc8e35']
-  } else if ( 10 <= props.reginf ) {
+  } else if ( 10 <= props.lccnt ) {
     conditionBgColor = ['#b33939','#b33939']
   };
   return (

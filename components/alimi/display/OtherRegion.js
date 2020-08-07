@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
         flex : 3.1,
         marginTop : 30,
         marginLeft : 5,
+        marginRight : 5,
     },
   other : {
     flex : 4,

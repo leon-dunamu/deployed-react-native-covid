@@ -20,7 +20,7 @@ export default function StatusFace(props){
 const styles = StyleSheet.create({
   faceText : {
     flex : 4.4,
-    fontSize : 70,
+    fontSize : 80,
     textAlign : "center",
     textAlignVertical : "bottom"
   },

@@ -18,13 +18,13 @@ const styles = StyleSheet.create({
     countSentence : {
       flex : 2,
       textAlign : "center",
-      marginBottom : 13
+      marginBottom : 19
     },
     countSentenceTxt : {
       flex : 1,
       textAlign : "center",
       textAlignVertical : "bottom",
-      fontSize : 21,
+      fontSize : 19,
       color : "white",
     },
 })
