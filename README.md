@@ -1,6 +1,6 @@
 # deployed-react-native-covid
 
-Download App : [코로나 지수][https://onestore.co.kr/userpoc/apps/view?pid=0000750111]
+Download App : [코로나 지수](https://onestore.co.kr/userpoc/apps/view?pid=0000750111)
 
 If there is a recent confirmed case within the main living radius of 2.4 km, the area is at risk. So, we made it easy to understand the level of risk at a glance, dividing it into good, dangerous, and prohibited from going out like a fine dust alert.   
    
@@ -30,7 +30,7 @@ Even if you are not good at using it, I hope you all will be safer using this ap
 ## App launch Img
 
 
-<img src="https://user-images.githubusercontent.com/49581472/89732167-ed9ab280-da87-11ea-93c9-f05aa675540a.jpeg" width:"30%" height:"30%"></img>
-<img src="https://user-images.githubusercontent.com/49581472/89732206-38b4c580-da88-11ea-8f55-29d214e4ccd1.jpeg" width:"30%" height:"30%"></img>
-<img src="https://user-images.githubusercontent.com/49581472/89732215-48340e80-da88-11ea-95be-d631078ce886.jpeg" width:"30%" height:"30%"></img>
-<img src="https://user-images.githubusercontent.com/49581472/89732235-571ac100-da88-11ea-8b8d-0d050b5e6bba.jpeg" width:"30%" height:"30%"></img>
+<img src="https://user-images.githubusercontent.com/49581472/89732167-ed9ab280-da87-11ea-93c9-f05aa675540a.jpeg" width:"30%" height:"30%">
+<img src="https://user-images.githubusercontent.com/49581472/89732206-38b4c580-da88-11ea-8f55-29d214e4ccd1.jpeg" width:"30%" height:"30%">
+<img src="https://user-images.githubusercontent.com/49581472/89732215-48340e80-da88-11ea-95be-d631078ce886.jpeg" width:"30%" height:"30%">
+<img src="https://user-images.githubusercontent.com/49581472/89732235-571ac100-da88-11ea-8b8d-0d050b5e6bba.jpeg" width:"30%" height:"30%">
