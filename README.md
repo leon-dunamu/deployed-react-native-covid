@@ -2,15 +2,15 @@
 
 Download App : [코로나 지수](https://onestore.co.kr/userpoc/apps/view?pid=0000750111)
 
-If there is a recent confirmed case within the main living radius of 2.4 km, the area is at risk. So, we made it easy to understand the level of risk at a glance, dividing it into good, dangerous, and prohibited from going out like a fine dust alert.   
+> If there is a recent confirmed case within the main living radius of 2.4 km, the area is at risk. So, we made it easy to understand the level of risk at a glance, dividing it into good, dangerous, and prohibited from going out like a fine dust alert.   
    
-In addition, you can know the number of new confirmed cases nationwide by using public data without having to search for corona 19 confirmed cases on the portal site every day.   
+> In addition, you can know the number of new confirmed cases nationwide by using public data without having to search for corona 19 confirmed cases on the portal site every day.   
    
-The "질병관리본부" briefs the location of confirmed patients daily as a notice on the homepage. However, I don't think there is enough time to read the briefing every day and the visibility is poor. People will be able to know more easily if it is displayed on the website and in the app so that it is easy to see and the number of confirmed coronaviruses around the area is indicated.   
+> The "질병관리본부" briefs the location of confirmed patients daily as a notice on the homepage. However, I don't think there is enough time to read the briefing every day and the visibility is poor. People will be able to know more easily if it is displayed on the website and in the app so that it is easy to see and the number of confirmed coronaviruses around the area is indicated.   
    
-Corona 19 may require us to adapt and live like a cold. The rate of spread and genetic mutation is so fast that it is difficult to develop a vaccine at this time. We have created a web and an app so that you can learn about the situation of Corona 19 at a glance, using public data, in the hope that everyone will thoroughly observe personal hygiene and practice social distancing in the current situation.   
+> Corona 19 may require us to adapt and live like a cold. The rate of spread and genetic mutation is so fast that it is difficult to develop a vaccine at this time. We have created a web and an app so that you can learn about the situation of Corona 19 at a glance, using public data, in the hope that everyone will thoroughly observe personal hygiene and practice social distancing in the current situation.   
    
-Even if you are not good at using it, I hope you all will be safer using this app and overcome the current situation.   
+> Even if you are not good at using it, I hope you all will be safer using this app and overcome the current situation.   
    
    
    
