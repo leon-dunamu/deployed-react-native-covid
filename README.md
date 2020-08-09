@@ -30,7 +30,7 @@ Even if you are not good at using it, I hope you all will be safer using this ap
 ## App launch Img
 
 
-<img src="https://user-images.githubusercontent.com/49581472/89732167-ed9ab280-da87-11ea-93c9-f05aa675540a.jpeg" width:"30%" height:"30%">
-<img src="https://user-images.githubusercontent.com/49581472/89732206-38b4c580-da88-11ea-8f55-29d214e4ccd1.jpeg" width:"30%" height:"30%">
-<img src="https://user-images.githubusercontent.com/49581472/89732215-48340e80-da88-11ea-95be-d631078ce886.jpeg" width:"30%" height:"30%">
-<img src="https://user-images.githubusercontent.com/49581472/89732235-571ac100-da88-11ea-8b8d-0d050b5e6bba.jpeg" width:"30%" height:"30%">
+<img src="https://user-images.githubusercontent.com/49581472/89732167-ed9ab280-da87-11ea-93c9-f05aa675540a.jpeg" width=300px>
+<img src="https://user-images.githubusercontent.com/49581472/89732206-38b4c580-da88-11ea-8f55-29d214e4ccd1.jpeg" width=300px>
+<img src="https://user-images.githubusercontent.com/49581472/89732215-48340e80-da88-11ea-95be-d631078ce886.jpeg" width=300px>
+<img src="https://user-images.githubusercontent.com/49581472/89732235-571ac100-da88-11ea-8b8d-0d050b5e6bba.jpeg" width=300px>
