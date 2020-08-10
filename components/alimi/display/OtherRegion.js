@@ -4,6 +4,8 @@ import getOtherRegion from '../publicData/GetOtherRegion';
 import ShowRegion from '../publicData/ShowRegion';
 import OtherTitle from '../otherRegion/otherTitle';
 
+import Loading from '../../Loading/Loading';
+
 const getTime = () => {
     let today = new Date();   
     let year = today.getFullYear()-2000; // 년도
@@ -25,11 +27,13 @@ export default function OtherRegion() {
     const [regWithInf, setregWithInf] = useState([]);
     const [count , setCount] = useState(0);
     const curtime = getTime();
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(()=> {
         getOtherRegion().then(data => {
             let reversed = data.reverse();
             setregWithInf(reversed);
+            setIsLoading(false);
         });
         // console.log('it is',regWithInf);
     },[]);
@@ -37,24 +41,27 @@ export default function OtherRegion() {
         <>
             <View style={styles.ohterWrapper}>
                 <OtherTitle curtime={curtime} />
-                <ScrollView horizontal={true}>
-                    <View style={styles.other}>
-                        {/*  */}
-                        {regWithInf.map((value) => {
-                            return (
-                                <ShowRegion key={`${value.regInf}+${value.isoclr}`}
-                                    reginf={value.regInf}
-                                    region={value.region}
-                                    defcnt = {value.defcnt}
-                                    isoing = {value.isoing}
-                                    isoclr = {value.isoclr}
-                                    ofcnt = {value.ofcnt}
-                                    lccnt = {value.lccnt}
-                                />
-                            )
-                        })}
-                    </View>
-                </ScrollView>
+                {
+                    isLoading ? <Loading />
+                    : <ScrollView horizontal={true}>
+                        <View style={styles.other}>
+                            {/*  */}
+                            {regWithInf.map((value) => {
+                                return (
+                                    <ShowRegion key={`${value.regInf}+${value.isoclr}`}
+                                        reginf={value.regInf}
+                                        region={value.region}
+                                        defcnt = {value.defcnt}
+                                        isoing = {value.isoing}
+                                        isoclr = {value.isoclr}
+                                        ofcnt = {value.ofcnt}
+                                        lccnt = {value.lccnt}
+                                    />
+                                )
+                            })}
+                        </View>
+                    </ScrollView>
+                }
             </View>
         </>
     )

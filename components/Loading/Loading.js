@@ -13,9 +13,9 @@ export default function Loading () {
 
 const styles = StyleSheet.create({
     container : {
-        flex : 1,
+        flex : 3.1,
         alignItems : "center",
         justifyContent : "center",
-        backgroundColor : "#dfe6e9"
+        backgroundColor : "#f6f6f6"
     }
 })

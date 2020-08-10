@@ -1,7 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React,{ useState, useEffect } from 'react';
-import { Alert } from 'react-native';
-import * as Location from "expo-location";
+import { ToastAndroid, BackHandler } from 'react-native';
 import Index from './components/alimi/Index';
 import Tips from './components/Tips/Tips';
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,33 +15,7 @@ const Stack = createStackNavigator();
 
 
 export default function App() {
-  const [isLoading, setisLoading] = useState(true);
-  const [lat, setLat] = useState('0');
-  const [lng, setLng] = useState('0');
 
-  const getLoc = async() => {
-    try {
-      await Location.requestPermissionsAsync();
-      const {
-        coords: { latitude, longitude }
-      } = await Location.getCurrentPositionAsync();
-      setisLoading(false);
-      const myLocation = {
-        latitude : latitude,        // to change "latitude"
-        longitude : longitude       // to change "longitude"
-      }
-      setLat(latitude);
-      setLng(longitude);
-      console.log(latitude,longitude);
-    } catch (err) {
-      Alert.alert("이런! 위치 정보를 얻어오지 못 하였습니다", error);
-      console.log('err,', error);
-    }
-  }
-
-  useEffect(()=>{
-    // getLoc();
-  })
   return (
     <>
       {/* <Index /> */}

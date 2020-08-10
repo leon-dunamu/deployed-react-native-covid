@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
 import React,{ useState, useEffect } from 'react';
-import { StyleSheet, View, Alert, StatusBar } from 'react-native';
+import { StyleSheet, View, Alert, StatusBar, BackHandler } from 'react-native';
 import * as Location from "expo-location";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -105,6 +105,27 @@ export default function Index({navigation}) {
       console.log('err,', error);
     }
   };
+
+  useEffect(() => {
+    const backAction = () => {
+      Alert.alert("잠깐!", "앱을 종료시키시겠어요?", [
+        {
+          text: "Cancel",
+          onPress: () => null,
+          style: "cancel"
+        },
+        { text: "YES", onPress: () => BackHandler.exitApp() }
+      ]);
+      return true;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      backAction
+    );
+
+    return () => backHandler.remove();
+  }, []);
 
   useEffect(() => {
     getLocation();
