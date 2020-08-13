@@ -12,7 +12,7 @@ export default function TopNav() {
             <View>
                 <AdMobBanner
                     bannerSize="fullBanner"
-                    adUnitID="ca-app-pub-8028844409135703/8232936056" // Test ID, Replace with your-admob-unit-id
+                    adUnitID="ca-app-pub-8028844409135703/8017221744" // Test ID, Replace with your-admob-unit-id
                     servePersonalizedAds // true or false
                 />
             </View>

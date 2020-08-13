@@ -106,26 +106,6 @@ export default function Index({navigation}) {
     }
   };
 
-  useEffect(() => {
-    const backAction = () => {
-      Alert.alert("잠깐!", "앱을 종료시키시겠어요?", [
-        {
-          text: "Cancel",
-          onPress: () => null,
-          style: "cancel"
-        },
-        { text: "YES", onPress: () => BackHandler.exitApp() }
-      ]);
-      return true;
-    };
-
-    const backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
-      backAction
-    );
-
-    return () => backHandler.remove();
-  }, []);
 
   useEffect(() => {
     getLocation();

@@ -14,11 +14,12 @@ export default function BottomNav({navigation}) {
             {/* it shows bottom navigation bar */}
             <View style={styles.constainer}>
                 <View style={styles.menus}>
-                    <AntDesign onPress={()=>navigation.navigate('Map')} style={styles.tips} name="questioncircle"/>
+                    <AntDesign onPress={()=>navigation.navigate('Tips')} style={styles.tips} name="questioncircle"/>
                     <Text style={styles.txt}>Tips</Text>
                 </View>
                 <View style={styles.menus}>
-                    <MaterialCommunityIcons onPress={_OnPressGetPos}  name="web" style={styles.btnReload}/>
+                    {/* <MaterialCommunityIcons onPress={_OnPressGetPos}  name="web" style={styles.btnReload}/> */}
+                    <MaterialCommunityIcons onPress={()=>navigation.navigate('Maps')}  name="web" style={styles.btnReload}/>
                     <Text style={styles.txt}>Web</Text>
                 </View>
                 <View style={styles.menus}>

@@ -11,7 +11,11 @@
       "backgroundColor": "#ffffff"
     },
     "android": {
-      "package": "com.ws.covid"
+      "package": "com.ws.covid",
+      "versionCode" : 3,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~6895711765" 
+      }
     },
     "updates": {
       "fallbackToCacheTimeout": 0

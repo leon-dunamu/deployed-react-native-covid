@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import About from './components/alimi/othermenu/OtherAbout';
 import m1 from './components/alimi/othermenu/OtherMenu';
+import Maps from './components/map/maps';
 const Stack = createStackNavigator();
 
 
@@ -31,7 +32,7 @@ export default function App() {
             options = {{
               title : 'Tips'
             }}
-            name="Map"
+            name="Tips"
             component={Tips} />
           <Stack.Screen 
           options = {{
@@ -45,6 +46,12 @@ export default function App() {
           }}
           name="about"
           component={About} />
+          <Stack.Screen 
+          options = {{
+            title : 'Maps',
+          }}
+          name="Maps"
+          component={Maps} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

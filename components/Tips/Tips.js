@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { View, Text, StyleSheet, ScrollView, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
@@ -13,7 +13,7 @@ export default function Map(){
         <ScrollView>
             <AdMobBanner
                 bannerSize="fullBanner"
-                adUnitID="ca-app-pub-8028844409135703/8232936056" // Test ID, Replace with your-admob-unit-id
+                adUnitID="ca-app-pub-8028844409135703/8017221744" // Test ID, Replace with your-admob-unit-id
                 servePersonalizedAds // true or false
                 // onDidFailToReceiveAdWithError={bannerError}
             />
@@ -78,7 +78,7 @@ export default function Map(){
             </View>
             <AdMobBanner
                 bannerSize="fullBanner"
-                adUnitID="ca-app-pub-8028844409135703/8232936056" // Test ID, Replace with your-admob-unit-id
+                adUnitID="ca-app-pub-8028844409135703/8017221744" // Test ID, Replace with your-admob-unit-id
                 servePersonalizedAds // true or false
                 // onDidFailToReceiveAdWithError={bannerError}
             />

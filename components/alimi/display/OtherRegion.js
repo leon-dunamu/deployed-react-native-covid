@@ -69,7 +69,7 @@ export default function OtherRegion() {
 
 const styles = StyleSheet.create({
     ohterWrapper : {
-        flex : 3.1,
+        flex : 2.9,
         marginTop : 30,
         marginLeft : 5,
         marginRight : 5,
