@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, ScrollView, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Feather } from '@expo/vector-icons';
+import { Feather, Foundation } from '@expo/vector-icons';
 
 import {
     AdMobBanner,
@@ -26,13 +26,14 @@ export default function Map(){
                     금일 발생한 확진자 수를 전국 18개의 다른 도, 시, 검역[해외입국]의 상황을 볼 수 있습니다.
                 </Text>
                 <Text style={styles.text}>
-                    <MaterialCommunityIcons
+                    {/* <MaterialCommunityIcons
                         size={33} name="web"
                         onPress={()=> Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#')}
-                    /> 
+                    />  */}
+                    <Foundation name="map" size={33} /> 
                     버튼으로
-                    웹을 통해 지도로 더욱 자세히 알아볼 수 있습니다. 다른 지역의 상황을 눈으로
-                    직접 보고싶으신 경우에 알리미 화면의 하단의 웹 버튼을 통해 웹을 이용하실 수
+                    지도를 통해 더욱 자세히 알아볼 수 있습니다. 다른 지역의 상황을 눈으로
+                    직접 보고싶으신 경우에 알리미 화면의 하단의 지도 버튼을 통해 지도를 이용하실 수
                     있습니다.
                 </Text>
                 <Text style={styles.text}>

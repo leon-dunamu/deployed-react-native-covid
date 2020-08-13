@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Linking } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { Foundation } from '@expo/vector-icons';
 
 export default function BottomNav({navigation}) {
     const _OnPressGetPos = () => {
@@ -19,8 +20,9 @@ export default function BottomNav({navigation}) {
                 </View>
                 <View style={styles.menus}>
                     {/* <MaterialCommunityIcons onPress={_OnPressGetPos}  name="web" style={styles.btnReload}/> */}
-                    <MaterialCommunityIcons onPress={()=>navigation.navigate('Maps')}  name="web" style={styles.btnReload}/>
-                    <Text style={styles.txt}>Web</Text>
+                    <Foundation name="map" onPress={()=>navigation.navigate('Maps')} style={styles.btnReload}  />
+                    {/* <MaterialCommunityIcons onPress={()=>navigation.navigate('Maps')}  name="web" style={styles.btnReload}/> */}
+                    <Text style={styles.txt}>Map</Text>
                 </View>
                 <View style={styles.menus}>
                     <Feather onPress={()=>navigation.navigate('m1')} style={styles.hamburger} name="menu" />
