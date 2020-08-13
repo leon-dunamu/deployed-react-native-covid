@@ -3,25 +3,38 @@ import { View, Text, StyleSheet } from 'react-native';
 import { LinearGradient } from "expo-linear-gradient";
 
 const ShowRegion = (props) => {
-  let conditionBgColor = ['#1289A7','#1289A7'];
-  if(1 <= props.lccnt && props.lccnt <= 4) {
-    conditionBgColor = ['#009432','#009432'];
-  } else if ( 5 <= props.lccnt && props.lccnt <= 9 ){
-    conditionBgColor = ['#cc8e35','#cc8e35']
-  } else if ( 10 <= props.lccnt ) {
-    conditionBgColor = ['#b33939','#b33939']
+  let numPatient = props.region === '검역' ? props.ofcnt : props.lccnt;
+  let conditionBgColor = ['#1289A7','#5f27cd'];
+  if(1 <= numPatient && numPatient<= 4) {
+    conditionBgColor = ['#009432','#1289A7'];
+  } else if ( 5 <= numPatient && numPatient <= 9 ){
+    conditionBgColor = ['#cc8e35','#009432']
+  } else if ( 10 <= numPatient ) {
+    conditionBgColor = ['#b33939','#cc8e35']
   };
   return (
     <>
       <LinearGradient 
         colors={conditionBgColor}
-        style={{
+        style={[{
           flexDirection : "row",
           flex: 10,
-          margin : 10,
+          margin : 5,
           marginBottom : 10,
           borderRadius: 8,
-        }}
+          },
+          {
+            shadowColor: "#000",
+            shadowOffset: {
+                width: 0,
+                height: 3,
+            },
+            shadowOpacity: 0,
+            shadowRadius: 4.65,
+            
+            elevation: 6,
+          }
+        ]}
       >
         <View style={styles.rowList}>
           <Text style={styles.rowListTitle}>{props.region}</Text>

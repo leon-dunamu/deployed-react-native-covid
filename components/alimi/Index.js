@@ -28,6 +28,13 @@ import BottomNav from './display/BottomNav';
 
 
 let conditions ;
+const COLORS = [
+  '#5f27cd',  // purple
+  '#1289A7',  // blue
+  '#009432',  // green
+  '#cc8e35',  // orange
+  '#b33939'   // red
+]
 const JSON_URL = 'https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/2020-08-04/covid';
 
 export default function Index({navigation}) {
@@ -52,6 +59,8 @@ export default function Index({navigation}) {
       }
       console.log(latitude,longitude);
       const myad = await Location.reverseGeocodeAsync(myLocation);
+      // 특별시, 광역시는 city값이 null임을 확인
+      if(myad[0].city === null) myad[0].city = myad[0].region;
       setmyAddr(`${myad[0].city}  ${myad[0].street}`);
 
 
@@ -98,7 +107,7 @@ export default function Index({navigation}) {
           conditions = getCondition(cnt); // ee
           setFace(conditions.conditionFace);
           setCondition(conditions.conditionTxt);
-          setbgColor([conditions.conditionBgColor,conditions.conditionBgColor]);
+          setbgColor([COLORS[conditions.conditionBgColor],COLORS[conditions.conditionBgColor-1]]);
       })
     } catch (error) {
       Alert.alert("이런! 위치 정보를 얻어오지 못 하였습니다", error);
@@ -124,12 +133,24 @@ export default function Index({navigation}) {
             <View style={styles.statusWrapper}>
               <LinearGradient 
                 colors={bgColor}
-                style={{
+                style={[{
                   flexDirection : "row",
                   flex: 10,
                   margin : 18,
                   borderRadius: 8,
-                }}
+                  },
+                  {
+                    shadowColor: "#000",
+                    shadowOffset: {
+                        width: 0,
+                        height: 3,
+                    },
+                    shadowOpacity: 0,
+                    shadowRadius: 4.65,
+                    
+                    elevation: 6,
+                  }
+                ]}
               >
                 <View style={styles.faceWrapper}>
                   <StatusFace face={face}/>

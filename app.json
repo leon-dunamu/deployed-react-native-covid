@@ -14,7 +14,7 @@
       "package": "com.ws.covid",
       "versionCode" : 4,
       "config": {
-        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~6895711765" 
+        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~9581955987" 
       }
     },
     "updates": {
@@ -24,7 +24,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~9581955987" 
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
