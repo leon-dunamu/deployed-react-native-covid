@@ -2,7 +2,7 @@
   "expo": {
     "name": "코로나 지수",
     "slug": "react-native-covid",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon2.png",
     "splash": {
@@ -12,7 +12,7 @@
     },
     "android": {
       "package": "com.ws.covid",
-      "versionCode" : 4,
+      "versionCode" : 5,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-8028844409135703~9581955987" 
       }

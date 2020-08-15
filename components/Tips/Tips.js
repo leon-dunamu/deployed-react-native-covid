@@ -11,12 +11,12 @@ import {
 export default function Map(){
     return (
         <ScrollView>
-            <AdMobBanner
+            {/* <AdMobBanner
                 bannerSize="fullBanner"
                 adUnitID="ca-app-pub-8028844409135703/1703465968" // Test ID, Replace with your-admob-unit-id
                 servePersonalizedAds // true or false
                 // onDidFailToReceiveAdWithError={bannerError}
-            />
+            /> */}
             <View style={styles.container}>
 
                 <Text style={styles.title}>판별 기준</Text>
@@ -38,8 +38,7 @@ export default function Map(){
                         {` 매우 위험 : 주변 확진자 수 6 명 이상`}
                     </Text>
                     <Text style={[styles.text,{fontSize:12, textAlign:"right"}]}>
-                        {`* 시,도 신규 확진자 수의 배경색과는 기준이 조금 다릅니다
- * 최근 14일 이내 생활반경 내에서 발생한 확진자 수 입니다`}
+                        * 최근 14일 이내 생활반경 내에서 발생한 확진자 수 입니다
                     </Text>
                 </View>
                 <Text style={styles.title}></Text>
@@ -107,12 +106,12 @@ export default function Map(){
                     </Text>
                 </View>
             </View>
-            <AdMobBanner
+            {/* <AdMobBanner
                 bannerSize="fullBanner"
                 adUnitID="ca-app-pub-8028844409135703/1703465968" // Test ID, Replace with your-admob-unit-id
                 servePersonalizedAds // true or false
                 // onDidFailToReceiveAdWithError={bannerError}
-            />
+            /> */}
         </ScrollView>
         
     )
@@ -131,7 +130,7 @@ const styles = StyleSheet.create({
     text : {
         flex : 1,
         padding : 5,
-        fontSize : 20,
+        fontSize : 18,
         lineHeight : 33,
         textAlign : "justify"
     },

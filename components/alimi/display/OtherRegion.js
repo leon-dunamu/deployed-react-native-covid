@@ -3,6 +3,7 @@ import { StyleSheet ,View, ScrollView } from 'react-native';
 import getOtherRegion from '../publicData/GetOtherRegion';
 import ShowRegion from '../publicData/ShowRegion';
 import OtherTitle from '../otherRegion/otherTitle';
+import OtherTotal from '../otherRegion/otherTotal';
 
 import Loading from '../../Loading/Loading';
 
@@ -35,6 +36,7 @@ export default function OtherRegion() {
             setregWithInf(reversed);
             setIsLoading(false);
         });
+        console.log(regWithInf[0]);
         // console.log('it is',regWithInf);
     },[]);
     return (
@@ -43,21 +45,29 @@ export default function OtherRegion() {
                 <OtherTitle curtime={curtime} />
                 {
                     isLoading ? <Loading />
+                    : <OtherTotal regWithInf={regWithInf[0]}/>
+                }
+                {
+                    isLoading ? <Loading />
                     : <ScrollView horizontal={true}>
                         <View style={styles.other}>
                             {/*  */}
                             {regWithInf.map((value) => {
-                                return (
-                                    <ShowRegion key={`${value.regInf}+${value.isoclr}`}
-                                        reginf={value.regInf}
-                                        region={value.region}
-                                        defcnt = {value.defcnt}
-                                        isoing = {value.isoing}
-                                        isoclr = {value.isoclr}
-                                        ofcnt = {value.ofcnt}
-                                        lccnt = {value.lccnt}
-                                    />
-                                )
+                                if(value.region === '합계' || value.region === '검역'){
+                                    return ;
+                                } else {
+                                    return (
+                                        <ShowRegion key={`${value.regInf}+${value.isoclr}`}
+                                            reginf={value.regInf}
+                                            region={value.region}
+                                            defcnt = {value.defcnt}
+                                            isoing = {value.isoing}
+                                            isoclr = {value.isoclr}
+                                            ofcnt = {value.ofcnt}
+                                            lccnt = {value.lccnt}
+                                        />
+                                    )
+                                }
                             })}
                         </View>
                     </ScrollView>
@@ -69,7 +79,7 @@ export default function OtherRegion() {
 
 const styles = StyleSheet.create({
     ohterWrapper : {
-        flex : 2.9,
+        flex : 3.1,
         marginTop : 30,
         marginLeft : 5,
         marginRight : 5,

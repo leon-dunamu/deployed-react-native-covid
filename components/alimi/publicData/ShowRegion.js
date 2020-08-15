@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { LinearGradient } from "expo-linear-gradient";
 
 const ShowRegion = (props) => {
-  let numPatient = props.region === '검역' ? props.ofcnt : props.lccnt;
+  let numPatient = props.lccnt;
   let conditionBgColor = ['#1289A7','#5f27cd'];
   if(1 <= numPatient && numPatient<= 4) {
     conditionBgColor = ['#009432','#1289A7'];
@@ -59,10 +59,10 @@ const ShowRegion = (props) => {
               <Text style={[{flex : 1,color:'#227093'},styles.allofdesc_title]}>격리중</Text>
               <Text style={[{flex : 1,color:'#227093', textAlign : "right"},styles.allofdesc_desc]}>{props.isoing}</Text>
             </View>
-            <View style={[styles.rowListDesc,{flexDirection : "row"}]}>
+            {/* <View style={[styles.rowListDesc,{flexDirection : "row"}]}>
               <Text style={[{flex : 1,color : '#009432'},styles.allofdesc_title]}>격리해제</Text>
               <Text style={[{flex : 1,color : '#009432', textAlign : "right"},styles.allofdesc_desc]}>{props.isoclr}</Text>
-            </View>
+            </View> */}
           </View>
         </View>
       </LinearGradient>
@@ -75,16 +75,16 @@ export default ShowRegion;
 const styles = StyleSheet.create({
   rowList : {
     flex : 1,
-    width : 140,
+    width : 125,
     alignItems : 'center'
   },
   rowListTitle : {
-    flex : 0.7,
-    marginTop : 10,
-    fontSize : 26,
+    flex : 0.9,
+    fontSize : 18,
     textAlign : "center",
     color : 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlignVertical : "center",
   },
   rowListDesc : {
     flex : 1,
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     fontWeight : "bold",
   },
   rowListDescWrapper : {
-    width : 130,
+    width : 115,
     borderRadius : 5,
     flex : 3,
     backgroundColor : 'white',
@@ -104,10 +104,14 @@ const styles = StyleSheet.create({
   },
   allofdesc_title : {
     paddingLeft : 10,
-    fontWeight : 'bold'
+    fontWeight : 'bold',
+    fontSize : 12,
+    textAlignVertical : "center",
   },
   allofdesc_desc : {
     paddingRight : 10,
-    fontWeight : 'bold'
+    fontWeight : 'bold',
+    fontSize : 12,
+    textAlignVertical : "center",
   }
 })

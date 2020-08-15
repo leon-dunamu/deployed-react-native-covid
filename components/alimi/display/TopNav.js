@@ -10,11 +10,11 @@ export default function TopNav() {
         <>
             {/* it shows top navigation bar */}
             <View>
-                <AdMobBanner
+                {/* <AdMobBanner
                     bannerSize="fullBanner"
                     adUnitID="ca-app-pub-8028844409135703/1703465968" // Test ID, Replace with your-admob-unit-id
                     servePersonalizedAds // true or false
-                />
+                /> */}
             </View>
         </>
     )
