@@ -35,23 +35,24 @@ export default function App() {
             name="Tips"
             component={Tips} />
           <Stack.Screen 
-          options = {{
-            title : '다른 메뉴',
-          }}
-          name="m1"
-          component={m1} />
+            options = {{
+              title : '다른 메뉴',
+            }}
+            name="m1"
+            component={m1} />
           <Stack.Screen 
-          options = {{
-            title : 'ABOUT',
-          }}
-          name="about"
-          component={About} />
+            options = {{
+              title : 'ABOUT',
+            }}
+            name="about"
+            component={About} />
           <Stack.Screen 
-          options = {{
-            title : 'Maps',
-          }}
-          name="Maps"
-          component={Maps} />
+            options = {{
+              title : 'Maps',
+              headerShown: false
+            }}
+            name="Maps"
+            component={Maps} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

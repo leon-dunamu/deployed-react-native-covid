@@ -7,6 +7,8 @@ import OtherTotal from '../otherRegion/otherTotal';
 
 import Loading from '../../Loading/Loading';
 
+const CAPITAL = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종'];
+
 const getTime = () => {
     let today = new Date();   
     let year = today.getFullYear()-2000; // 년도
@@ -23,10 +25,7 @@ const getTime = () => {
 }
 
 export default function OtherRegion() {
-    // const [region, setRegion] = useState([]);
-    // const [regInf, setRegInf] = useState([]);
     const [regWithInf, setregWithInf] = useState([]);
-    const [count , setCount] = useState(0);
     const curtime = getTime();
     const [isLoading, setIsLoading] = useState(true);
 
@@ -36,8 +35,6 @@ export default function OtherRegion() {
             setregWithInf(reversed);
             setIsLoading(false);
         });
-        console.log(regWithInf[0]);
-        // console.log('it is',regWithInf);
     },[]);
     return (
         <>
@@ -55,7 +52,32 @@ export default function OtherRegion() {
                             {regWithInf.map((value) => {
                                 if(value.region === '합계' || value.region === '검역'){
                                     return ;
-                                } else {
+                                } else if(CAPITAL.includes(value.region)){
+                                    return (
+                                        <ShowRegion key={`${value.regInf}+${value.isoclr}`}
+                                            reginf={value.regInf}
+                                            region={value.region}
+                                            defcnt = {value.defcnt}
+                                            isoing = {value.isoing}
+                                            isoclr = {value.isoclr}
+                                            ofcnt = {value.ofcnt}
+                                            lccnt = {value.lccnt}
+                                        />
+                                    )
+                                }
+                            })}
+                        </View>
+                    </ScrollView>
+                }
+                {
+                    isLoading ? <Loading />
+                    : <ScrollView horizontal={true}>
+                        <View style={styles.other}>
+                            {/*  */}
+                            {regWithInf.map((value) => {
+                                if(value.region === '합계' || value.region === '검역'){
+                                    return ;
+                                } else if(!CAPITAL.includes(value.region)){
                                     return (
                                         <ShowRegion key={`${value.regInf}+${value.isoclr}`}
                                             reginf={value.regInf}
@@ -79,10 +101,10 @@ export default function OtherRegion() {
 
 const styles = StyleSheet.create({
     ohterWrapper : {
-        flex : 3.1,
+        flex : 3,
         marginTop : 30,
-        marginLeft : 5,
-        marginRight : 5,
+        marginLeft : 10,
+        marginRight : 10,
     },
   other : {
     flex : 4,

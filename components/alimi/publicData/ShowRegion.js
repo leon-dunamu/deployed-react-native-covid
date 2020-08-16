@@ -8,9 +8,9 @@ const ShowRegion = (props) => {
   if(1 <= numPatient && numPatient<= 4) {
     conditionBgColor = ['#009432','#1289A7'];
   } else if ( 5 <= numPatient && numPatient <= 9 ){
-    conditionBgColor = ['#cc8e35','#009432']
+    conditionBgColor = ['#e58e26','#009432']
   } else if ( 10 <= numPatient ) {
-    conditionBgColor = ['#b33939','#cc8e35']
+    conditionBgColor = ['#b33939','#e58e26']
   };
   return (
     <>
@@ -18,9 +18,8 @@ const ShowRegion = (props) => {
         colors={conditionBgColor}
         style={[{
           flexDirection : "row",
-          flex: 10,
+          flex: 1,
           margin : 5,
-          marginBottom : 10,
           borderRadius: 8,
           },
           {
@@ -75,7 +74,7 @@ export default ShowRegion;
 const styles = StyleSheet.create({
   rowList : {
     flex : 1,
-    width : 125,
+    width : 95,
     alignItems : 'center'
   },
   rowListTitle : {
@@ -90,28 +89,25 @@ const styles = StyleSheet.create({
     flex : 1,
     textAlign : "center",
     color : 'black',
-    fontSize : 16,
-    marginTop : 5,
-    marginBottom : 3,
     fontWeight : "bold",
   },
   rowListDescWrapper : {
-    width : 115,
+    width : 85,
     borderRadius : 5,
     flex : 3,
     backgroundColor : 'white',
     marginBottom : 5
   },
   allofdesc_title : {
-    paddingLeft : 10,
+    paddingLeft : 5,
     fontWeight : 'bold',
-    fontSize : 12,
+    fontSize : 10,
     textAlignVertical : "center",
   },
   allofdesc_desc : {
-    paddingRight : 10,
+    paddingRight : 5,
     fontWeight : 'bold',
-    fontSize : 12,
+    fontSize : 10,
     textAlignVertical : "center",
   }
 })

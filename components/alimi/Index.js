@@ -32,7 +32,7 @@ const COLORS = [
   '#5f27cd',  // purple
   '#1289A7',  // blue
   '#009432',  // green
-  '#cc8e35',  // orange
+  '#e58e26',  // orange
   '#b33939'   // red
 ]
 const JSON_URL = 'https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/2020-08-04/covid';
@@ -43,7 +43,7 @@ export default function Index({navigation}) {
   const [CountInCircle,setCountInCircle] = useState(0);
   const [condition, setCondition] = useState('Error');
   const [face, setFace] = useState('emoji-happy');
-  const [bgColor, setbgColor] = useState(['#1289A7','#1289A7']);
+  const [bgColor, setbgColor] = useState(['#1289A7','#5f27cd']);
   
 
   const getLocation = async () => {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     flex : 1,
   },
   statusWrapper : {
-    flex : 2.6,
+    flex : 1.8,
   },
   faceWrapper : {
     flex : 1.2,

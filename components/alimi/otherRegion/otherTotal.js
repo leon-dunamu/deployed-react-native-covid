@@ -50,7 +50,7 @@ export default function OtherTotal(props){
 
 const styles = StyleSheet.create({
     totalWrapper : {
-        flex : .5,
+        flex : .6,
         flexDirection : "row",
         margin: 5,
         backgroundColor :"#4b4b4b",
@@ -85,6 +85,6 @@ const styles = StyleSheet.create({
         borderRadius : 5,
         fontWeight : "bold",
         marginBottom : 5,
-        fontSize : 19
+        fontSize : 17
     }
 })
