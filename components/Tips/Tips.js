@@ -27,11 +27,11 @@ export default function Map(){
                     </Text>
                     <Text style={styles.text}>
                         <FontAwesome name="circle" size={24} color="#009432" />
-                        {` 위험 : 주변 확진자 수 1 ~ 2 명`}
+                        {` 조금 위험 : 주변 확진자 수 1 ~ 2 명`}
                     </Text>
                     <Text style={styles.text}>
                         <FontAwesome name="circle" size={24} color="#cc8e35" />
-                        {` 조금 위험 : 주변 확진자 수 3 ~ 5 명`}
+                        {` 위험 : 주변 확진자 수 3 ~ 5 명`}
                     </Text>
                     <Text style={styles.text}>
                         <FontAwesome name="circle" size={24} color="#b33939" />

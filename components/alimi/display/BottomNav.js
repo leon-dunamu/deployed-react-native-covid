@@ -25,7 +25,7 @@ export default function BottomNav({navigation}) {
                     <Text style={styles.txt}>Map</Text>
                 </View>
                 <View style={styles.menus}>
-                    <Feather onPress={()=>navigation.navigate('m1')} style={styles.hamburger} name="menu" />
+                    <Feather onPress={()=>navigation.navigate('Other')} style={styles.hamburger} name="menu" />
                     <Text style={styles.txt}>Other</Text>
                 </View>
             </View>

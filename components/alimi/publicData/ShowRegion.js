@@ -20,6 +20,7 @@ const ShowRegion = (props) => {
           flexDirection : "row",
           flex: 1,
           margin : 5,
+          marginBottom:0,
           borderRadius: 8,
           },
           {
@@ -74,12 +75,12 @@ export default ShowRegion;
 const styles = StyleSheet.create({
   rowList : {
     flex : 1,
-    width : 95,
+    width : 105,
     alignItems : 'center'
   },
   rowListTitle : {
     flex : 0.9,
-    fontSize : 18,
+    fontSize : 17,
     textAlign : "center",
     color : 'white',
     fontWeight: 'bold',
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
     fontWeight : "bold",
   },
   rowListDescWrapper : {
-    width : 85,
+    width : 95,
     borderRadius : 5,
     flex : 3,
     backgroundColor : 'white',
