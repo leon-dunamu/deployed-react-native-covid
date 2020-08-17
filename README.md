@@ -1,6 +1,13 @@
 # deployed-react-native-covid
 
-Download App : [코로나 지수](https://onestore.co.kr/userpoc/apps/view?pid=0000750111)
+> Download App : [코로나 지수](https://onestore.co.kr/userpoc/apps/view?pid=0000750111)
+
+## App launch Img
+<img src="https://user-images.githubusercontent.com/49581472/90370948-30bcdd00-e0a9-11ea-9267-c0bb2cb060fa.gif" width=300px>
+
+<img width="844" alt="스크린샷 2020-08-17 오후 4 43 18" src="https://user-images.githubusercontent.com/49581472/90370698-c99f2880-e0a8-11ea-8e5b-979ff0d8a2df.png">
+
+## Descripts
 
 > If there is a recent confirmed case within the main living radius of 2.4 km, the area is at risk. So, we made it easy to understand the level of risk at a glance, dividing it into good, dangerous, and prohibited from going out like a fine dust alert.   
 > In addition, you can know the number of new confirmed cases nationwide by using public data without having to search for corona 19 confirmed cases on the portal site every day.   
@@ -19,8 +26,4 @@ Download App : [코로나 지수](https://onestore.co.kr/userpoc/apps/view?pid=0
    
    
    
-## App launch Img
 
-<img width="844" alt="스크린샷 2020-08-17 오후 4 43 18" src="https://user-images.githubusercontent.com/49581472/90370698-c99f2880-e0a8-11ea-8e5b-979ff0d8a2df.png">
-
-<img src="https://user-images.githubusercontent.com/49581472/90370948-30bcdd00-e0a9-11ea-9267-c0bb2cb060fa.gif" width=300px>
