@@ -21,8 +21,6 @@ Download App : [코로나 지수](https://onestore.co.kr/userpoc/apps/view?pid=0
    
 ## App launch Img
 
+<img width="844" alt="스크린샷 2020-08-17 오후 4 43 18" src="https://user-images.githubusercontent.com/49581472/90370698-c99f2880-e0a8-11ea-8e5b-979ff0d8a2df.png">
 
-<img src="https://user-images.githubusercontent.com/49581472/89732167-ed9ab280-da87-11ea-93c9-f05aa675540a.jpeg" width=300px>
-<img src="https://user-images.githubusercontent.com/49581472/89732206-38b4c580-da88-11ea-8f55-29d214e4ccd1.jpeg" width=300px>
-<img src="https://user-images.githubusercontent.com/49581472/89732215-48340e80-da88-11ea-95be-d631078ce886.jpeg" width=300px>
-<img src="https://user-images.githubusercontent.com/49581472/89732235-571ac100-da88-11ea-8b8d-0d050b5e6bba.jpeg" width=300px>
+<img src="https://user-images.githubusercontent.com/49581472/90370948-30bcdd00-e0a9-11ea-9267-c0bb2cb060fa.gif" width=300px>
