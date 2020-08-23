@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Alert } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 export default function StatusRandomSentence(props) {
@@ -65,7 +65,7 @@ export default function StatusRandomSentence(props) {
 
 const styles = StyleSheet.create({
     countSentence : {
-        flex : 2.2,
+        flex : 2,
         textAlign : "center",
     },
       countSentenceTxt : {

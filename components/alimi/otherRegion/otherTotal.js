@@ -50,7 +50,7 @@ export default function OtherTotal(props){
 
 const styles = StyleSheet.create({
     totalWrapper : {
-        flex : .6,
+        height : 70,
         flexDirection : "row",
         margin: 5,
         backgroundColor :"#4b4b4b",

@@ -19,6 +19,17 @@ export default function Map(){
             /> */}
             <View style={styles.container}>
 
+                <Text style={styles.title}>주의사항</Text>
+                <View style={styles.cover}>
+                    <Text style={styles.text}>
+                        확진자의 집 위치가 아닌, 확진자가 다닌 동선 (카페, 음식점, 의료원 등)을 표기한 것입니다.
+                    </Text>
+                    <Text style={styles.text}>
+                        위치파악을 다시하길 원하시는 경우 앱의 홈 화면에서 스크롤을 아래로 해주시면
+                        위치를 재파악합니다.
+                    </Text>
+                </View>
+                <Text></Text>
                 <Text style={styles.title}>판별 기준</Text>
                 <View style={styles.cover}>
                     <Text style={styles.text}>
@@ -26,11 +37,11 @@ export default function Map(){
                         {` 좋음 : 주변 확진자 수 0 명`}
                     </Text>
                     <Text style={styles.text}>
-                        <FontAwesome name="circle" size={24} color="#009432" />
+                        <FontAwesome name="circle" size={24} color="#f1c40f" />
                         {` 조금 위험 : 주변 확진자 수 1 ~ 2 명`}
                     </Text>
                     <Text style={styles.text}>
-                        <FontAwesome name="circle" size={24} color="#cc8e35" />
+                        <FontAwesome name="circle" size={24} color="#e67e22" />
                         {` 위험 : 주변 확진자 수 3 ~ 5 명`}
                     </Text>
                     <Text style={styles.text}>

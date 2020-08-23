@@ -1,6 +1,6 @@
 // import { StatusBar } from 'expo-status-bar';
-import React,{ useState, useEffect } from 'react';
-import { StyleSheet, View, Alert, StatusBar, BackHandler } from 'react-native';
+import React,{ useState, useEffect, useCallback } from 'react';
+import { StyleSheet, View, Alert, StatusBar, ScrollView, Dimensions,RefreshControl } from 'react-native';
 import * as Location from "expo-location";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -25,17 +25,23 @@ import StatusRandomSentence from './status/StatusRandom';
 // tips, web, other
 import BottomNav from './display/BottomNav';
 
-
+const { width, height } = Dimensions.get('window');
 
 let conditions ;
 const COLORS = [
   '#5f27cd',  // purple
   '#1289A7',  // blue
-  '#009432',  // green
-  '#e58e26',  // orange
+  '#f1c40f',  // yellow
+  '#ff793f',  // orange
   '#b33939'   // red
 ]
 const JSON_URL = 'https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/2020-08-04/covid';
+
+const wait = (timeout) => {
+  return new Promise(resolve => {
+    setTimeout(resolve, timeout);
+  });
+};
 
 export default function Index({navigation}) {
   const [isLoading, setisLoading] = useState(true);
@@ -44,6 +50,14 @@ export default function Index({navigation}) {
   const [condition, setCondition] = useState('Error');
   const [face, setFace] = useState('emoji-happy');
   const [bgColor, setbgColor] = useState(['#1289A7','#5f27cd']);
+
+  const [refreshing, setRefreshing] = useState(false);
+
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    getLocation();
+    wait(2000).then(() => setRefreshing(false));
+  }, []);
   
 
   const getLocation = async () => {
@@ -125,8 +139,16 @@ export default function Index({navigation}) {
       {
         isLoading ? 
           <Loading />
-        : <View style={styles.wrapper}>
-            {/* <StatusBar translucent backgroundColor="transparent" /> */}
+        : 
+        <>
+          <View style={styles.wrapper}>
+            <ScrollView 
+              style={{ height:height}}
+              refreshControl={
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+              }
+            >
+              {/* <StatusBar translucent backgroundColor="transparent" /> */}
             <StatusBar barStyle="light-content" />
             {/* it shows top navigation bar */}
             <TopNav />
@@ -135,7 +157,7 @@ export default function Index({navigation}) {
                 colors={bgColor}
                 style={[{
                   flexDirection : "row",
-                  flex: 10,
+                  flex: 8,
                   margin : 18,
                   borderRadius: 8,
                   },
@@ -163,8 +185,10 @@ export default function Index({navigation}) {
             </View>
             <OtherRegion />
             {/* it shows bottom navigation bar */}
-            <BottomNav navigation={navigation}/>
+            </ScrollView>
           </View>
+          <BottomNav navigation={navigation}/>
+        </>
       }
     </>
   );
@@ -175,7 +199,7 @@ const styles = StyleSheet.create({
     flex : 1,
   },
   statusWrapper : {
-    flex : 1.8,
+    height : height*0.35,
   },
   faceWrapper : {
     flex : 1.2,

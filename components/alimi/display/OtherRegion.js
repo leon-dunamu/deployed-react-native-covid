@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet ,View, ScrollView } from 'react-native';
+import { StyleSheet ,View, ScrollView, Dimensions } from 'react-native';
 import getOtherRegion from '../publicData/GetOtherRegion';
 import ShowRegion from '../publicData/ShowRegion';
 import OtherTitle from '../otherRegion/otherTitle';
@@ -7,6 +7,7 @@ import OtherTotal from '../otherRegion/otherTotal';
 
 import Loading from '../../Loading/Loading';
 
+const { width, height } = Dimensions.get('window');
 const CAPITAL = ['서울', '부산', '대구', '인천', '광주', '대전', '울산', '세종'];
 
 const getTime = () => {
@@ -71,7 +72,7 @@ export default function OtherRegion() {
                 }
                 {
                     isLoading ? <Loading />
-                    : <ScrollView horizontal={true}>
+                    : <ScrollView horizontal={true} >
                         <View style={styles.other}>
                             {/*  */}
                             {regWithInf.map((value) => {
@@ -101,14 +102,14 @@ export default function OtherRegion() {
 
 const styles = StyleSheet.create({
     ohterWrapper : {
-        flex : 3,
+        height : height*0.51,
         marginTop : 30,
         marginLeft : 10,
         marginRight : 10,
     },
-  other : {
-    flex : 4,
-    flexDirection : "row",
-    marginBottom : 8,
-  },
+    other : {
+        height : height*0.16,
+        flexDirection : "row",
+        marginBottom : 8,
+    },
 })

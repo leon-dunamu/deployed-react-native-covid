@@ -38,8 +38,7 @@ const styles = StyleSheet.create({
         backgroundColor : '#dcdde1',
         height : 60,
         flexDirection : "row",
-        shadowColor: "#000",
-        elevation : -6
+        shadowColor: "#000",  
     },
     menus : {
         flex : 1,

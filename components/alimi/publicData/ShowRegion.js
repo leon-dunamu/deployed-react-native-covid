@@ -6,11 +6,11 @@ const ShowRegion = (props) => {
   let numPatient = props.lccnt;
   let conditionBgColor = ['#1289A7','#5f27cd'];
   if(1 <= numPatient && numPatient<= 4) {
-    conditionBgColor = ['#009432','#1289A7'];
+    conditionBgColor = ['#f1c40f','#1289A7'];
   } else if ( 5 <= numPatient && numPatient <= 9 ){
-    conditionBgColor = ['#e58e26','#009432']
+    conditionBgColor = ['#e67e22','#f1c40f']
   } else if ( 10 <= numPatient ) {
-    conditionBgColor = ['#b33939','#e58e26']
+    conditionBgColor = ['#b33939','#e67e22']
   };
   return (
     <>
