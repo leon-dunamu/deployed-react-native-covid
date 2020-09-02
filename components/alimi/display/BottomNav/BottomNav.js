@@ -1,15 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Text, View, Linking } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Foundation } from '@expo/vector-icons';
+import styles from './BottomNav.styled';
 
 export default function BottomNav({navigation}) {
-    const _OnPressGetPos = () => {
-        Linking.openURL('https://1seok2.github.io/Hack-GreenSky/#');
-    }
-    
     return (
         <>
             {/* it shows bottom navigation bar */}
@@ -32,42 +28,3 @@ export default function BottomNav({navigation}) {
         </>
     );
 }
-
-const styles = StyleSheet.create({
-    constainer : {
-        backgroundColor : '#dcdde1',
-        height : 60,
-        flexDirection : "row",
-        shadowColor: "#000",  
-    },
-    menus : {
-        flex : 1,
-    },  
-    txt : {
-        flex : 1,
-        fontSize : 10,
-        marginBottom : 5,
-        textAlign : "center",
-    },
-    btnReload : {
-        flex : 3,
-        color : '#2f3640',
-        fontSize : 30,
-        textAlign : "center",
-        textAlignVertical : "bottom",
-    },
-    tips : {
-      flex : 3,
-      fontSize : 28,
-      color : "#2f3640",
-      textAlign : "center",
-      textAlignVertical : "bottom",
-    },
-    hamburger : {
-        flex : 3,
-        fontSize : 30,
-        color : "#2f3640",
-        textAlign : "center",
-        textAlignVertical : "bottom",
-    }
-})

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
+import styles from './TopNav.styled';
 
 import {
     AdMobBanner,
@@ -10,7 +11,7 @@ export default function TopNav() {
     return (
         <>
             {/* it shows top navigation bar */}
-            <Text style={{textAlign : "center", marginTop : 10, color:'#666'}}>
+            <Text style={styles.container}>
                 {/* <AdMobBanner
                     bannerSize="fullBanner"
                     adUnitID="ca-app-pub-8028844409135703/1703465968" // Test ID, Replace with your-admob-unit-id

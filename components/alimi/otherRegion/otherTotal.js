@@ -1,28 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { LinearGradient } from "expo-linear-gradient";
+import { View, Text } from 'react-native';
+import styles from './other.styled';
 
-// reginf={value.regInf}
-// region={value.region}
-// defcnt = {value.defcnt}
-// isoing = {value.isoing}
-// isoclr = {value.isoclr}
-// ofcnt = {value.ofcnt}
-// lccnt = {value.lccnt}
 export default function OtherTotal(props){
-
-
     return (
         <>
             <View style={styles.totalWrapper}>
-                {/* <Text style={{
-                    flex:1,
-                    textAlign:"center",
-                    textAlignVertical : "center",
-                    fontSize : 18,
-                    fontWeight : "bold",
-                    color:'white'
-                }}>전국</Text> */}
                 <View style={[styles.descWrapper,{marginLeft:6}]}>
                     <Text style={styles.descTitle}>누적</Text>
                     <Text style={styles.descContent}>{props.regWithInf.defcnt}</Text>
@@ -47,45 +30,3 @@ export default function OtherTotal(props){
         </>
     );
 }
-
-const styles = StyleSheet.create({
-    totalWrapper : {
-        height : 70,
-        flexDirection : "row",
-        margin: 5,
-        backgroundColor :"#4b4b4b",
-        borderRadius : 5,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
-        shadowOpacity: 0,
-        shadowRadius: 4.65,
-        
-        elevation: 6,
-        marginBottom : 10,
-        marginTop : 10
-    },
-    descWrapper : {
-        flex : 1.3,
-        margin : 3,
-    },
-    descTitle : {
-        flex :.9,
-        textAlignVertical : "center",
-        textAlign : "center",
-        color : 'white',
-        fontWeight : "bold"
-    },
-    descContent : {
-        flex : 1,
-        textAlign : "center",
-        textAlignVertical : "center",
-        backgroundColor : 'white',
-        borderRadius : 5,
-        fontWeight : "bold",
-        marginBottom : 5,
-        fontSize : 17
-    }
-})

@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet ,View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-
+import styles from './other.styled';
 
 export default function OtherTitle (props) {
 
@@ -19,12 +19,3 @@ export default function OtherTitle (props) {
         </>
     )
 }
-
-const styles = StyleSheet.create({
-    title : {
-        height:30,
-        flexDirection : 'row',
-        alignItems : 'flex-start',
-        marginLeft : 4,
-    },
-})

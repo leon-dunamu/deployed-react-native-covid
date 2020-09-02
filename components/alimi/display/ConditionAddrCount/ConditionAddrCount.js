@@ -1,8 +1,9 @@
 import React from 'react';
-import { View , StyleSheet} from 'react-native';
+import { View } from 'react-native';
 
-import MyAddress from './MyAddress';
-import StatusSentence from '../status/StatusSentence';
+import MyAddress from '../MyAddress';
+import StatusSentence from '../../status/StatusSentence';
+import styles from './ConditionAddrCount.styled';
 
 export default function ConditionAddrCount(props) {
     return (
@@ -16,9 +17,3 @@ export default function ConditionAddrCount(props) {
         </>
     )
 }
-
-const styles = StyleSheet.create({
-  txtWrapper : {
-    flex : 2,
-  },
-})

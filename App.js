@@ -2,14 +2,14 @@
 import React,{ useState, useEffect } from 'react';
 import { ToastAndroid, BackHandler } from 'react-native';
 import Index from './components/alimi/Index';
-import Tips from './components/Tips/Tips';
+import Tips from './components/Tips';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
 import About from './components/alimi/othermenu/OtherAbout';
 import Other from './components/alimi/othermenu/OtherMenu';
-import Maps from './components/map/maps';
+import Maps from './components/map';
 const Stack = createStackNavigator();
 
 

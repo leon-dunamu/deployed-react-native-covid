@@ -9,7 +9,7 @@ import DateGapAcumulator from './make/DateGapAcumulator';
 import PositionDistance from './make/PositionDistance';
 
 // loading
-import Loading from '../Loading/Loading';
+import Loading from '../Loading';
 
 // top navigation
 import TopNav from './display/TopNav';

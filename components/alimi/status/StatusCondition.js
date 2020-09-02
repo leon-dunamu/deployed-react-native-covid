@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet,View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import styles from './Status.styled';
 
 
 export default function StatusCondition(props){
@@ -23,17 +24,3 @@ export default function StatusCondition(props){
         </>
     )
 }
-
-const styles = StyleSheet.create({
-    conditionTxt : {
-      marginTop : 10,
-      textAlign : "center",
-      textAlignVertical : "top",
-      fontSize : 20,
-      color : 'white',
-    },
-    Sconstainer : {
-      flex : 2.3,
-      marginTop : 10
-    },
-})
