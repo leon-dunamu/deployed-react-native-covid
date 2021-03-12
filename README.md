@@ -8,15 +8,6 @@
 <img width="844" alt="스크린샷 2020-08-17 오후 4 43 18" src="https://user-images.githubusercontent.com/49581472/90370698-c99f2880-e0a8-11ea-8e5b-979ff0d8a2df.png">
 
 ## Descripts
-
-> If there is a recent confirmed case within the main living radius of 2.4 km, the area is at risk. So, we made it easy to understand the level of risk at a glance, dividing it into good, dangerous, and prohibited from going out like a fine dust alert.   
-> In addition, you can know the number of new confirmed cases nationwide by using public data without having to search for corona 19 confirmed cases on the portal site every day.   
-> The "질병관리본부" briefs the location of confirmed patients daily as a notice on the homepage. However, I don't think there is enough time to read the briefing every day and the visibility is poor. People will be able to know more easily if it is displayed on the website and in the app so that it is easy to see and the number of confirmed coronaviruses around the area is indicated.   
-> Corona 19 may require us to adapt and live like a cold. The rate of spread and genetic mutation is so fast that it is difficult to develop a vaccine at this time. We have created a web and an app so that you can learn about the situation of Corona 19 at a glance, using public data, in the hope that everyone will thoroughly observe personal hygiene and practice social distancing in the current situation.   
-> Even if you are not good at using it, I hope you all will be safer using this app and overcome the current situation.   
-   
-   
-   
    
 > 주요 생활 반경인 2.4km 이내에 최근 발생한 확진자가 있다면 해당 지역은 위험한 상황입니다. 그래서 위험도 수준을 한눈에 알아보기 쉽게 미세먼지 알리미처럼 좋음, 위험, 외출금지로 나누어 한눈에 파악할 수 있게 만들었습니다.    
 > 또한 일일히 포털 사이트에 코로나 확진자를 검색하지 않아도 공공데이터를 이용하여 전국의 일일 신규 확진자 수를 알 수 있습니다.    
