@@ -1,0 +1,38 @@
+{
+  "name": "covid19jisu",
+  "displayName": "covid19jisu",
+  "expo": {
+    "name": "코로나 지수",
+    "slug": "react-native-covid",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon2.png",
+    "splash": {
+      "image": "./assets/splash5.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.ws.covid",
+      "versionCode" : 7,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~9581955987" 
+      }
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-8028844409135703~9581955987" 
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
