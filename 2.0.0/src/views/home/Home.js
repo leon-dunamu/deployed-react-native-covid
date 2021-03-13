@@ -14,12 +14,14 @@ import {
 import { getCoronamapData } from "../../api/api-coronamap";
 import { getKoreaCorona } from "../../api/api-korea";
 import { PublicItem } from "../../components/public.item";
+import PublicHeader from "../../components/public.header";
 
 const Home = ({
   state: { KoreaReducer: stateKorea },
   saveCoronamap,
   saveKorea,
 }) => {
+  console.log("render!");
   React.useEffect(() => {
     const getMapData = async () => {
       let mapResult = null;
@@ -64,7 +66,9 @@ const Home = ({
         backgroundColor: "white",
       }}
     >
-      <ScrollView style={{ width: "100%", height: "100%" }}>
+      <View style={{ flex: 0.5, backgroundColor: "green" }}></View>
+      <PublicHeader updatedAt={stateKorea[0].createDt} />
+      <ScrollView style={{ width: "100%", height: "100%", flex: 1 }}>
         {stateKorea.map((item, idx) => (
           <PublicItem item={item} key={item.gubun + idx} />
         ))}

@@ -4,14 +4,9 @@
  */
 
 import React from "react";
-import { View, Text } from "react-native";
+import { WebView } from "react-native-webview";
+import { GITPAGES_URL } from "../../config/urls";
 
-const Map = () => {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-};
+const Map = () => <WebView source={{ uri: GITPAGES_URL }} />;
 
 export default Map;

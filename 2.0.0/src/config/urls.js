@@ -6,3 +6,5 @@ export const PUBLIC_KOREA_URL = (NowTime) => `
 `;
 
 export const CORONAMAP_URL = "https://coroname.me/getdata";
+
+export const GITPAGES_URL = "https://1seok2.github.io/Hack-GreenSky/#";
