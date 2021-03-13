@@ -1,4 +1,7 @@
 import React from "react";
+import { View } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import { color } from "../assets/style/color";
 import * as s from "./public.styled";
 
 export const PublicItem = ({ item }) => {
@@ -46,13 +49,10 @@ export const PublicItem = ({ item }) => {
           >
             {defCnt}
           </s.Title>
-          <s.Title
-            styles={{
-              flex: 2,
-            }}
-          >
-            {incDec}
-          </s.Title>
+          <s.UpView styles={{ flex: 2 }}>
+            {incDec ? <Ionicons name="caret-up" color={color.red} /> : null}
+            <s.Title styles={incDec ? upstyles : nonestyles}>{incDec}</s.Title>
+          </s.UpView>
         </s.ItemBody>
         <s.ItemBody
           styles={{
@@ -76,15 +76,17 @@ export const PublicItem = ({ item }) => {
           >
             {isolClearCnt}
           </s.Title>
-          <s.Title
-            styles={{
-              flex: 3,
-            }}
-          >
-            {isolIngCnt}
-          </s.Title>
+          <s.UpView styles={{ flex: 4 }}>
+            {isolIngCnt ? <Ionicons name="caret-up" color={color.red} /> : null}
+            <s.Title styles={isolIngCnt ? upstyles : nonestyles}>
+              {isolIngCnt}
+            </s.Title>
+          </s.UpView>
         </s.ItemBody>
       </s.ItemContainer>
     </>
   );
 };
+
+const upstyles = { textAlign: "left", marginLeft: "1.5px", color: color.red };
+const nonestyles = { textAlign: "left", marginLeft: "8px", color: color.black };

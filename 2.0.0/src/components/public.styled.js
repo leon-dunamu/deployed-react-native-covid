@@ -83,3 +83,11 @@ export const TouchItemBody = styled.TouchableOpacity`
   `
       : null}
 `;
+
+export const UpView = styled.View`
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+
+  ${(props) => (props.styles ? props.styles : "")};
+`;
