@@ -15,6 +15,7 @@ import { getCoronamapData } from "../../api/api-coronamap";
 import { getKoreaCorona } from "../../api/api-korea";
 import { PublicItem } from "../../components/public.item";
 import PublicHeader from "../../components/public.header";
+import { HomeContainer, PublicScroll } from "./Home.styled";
 
 const Home = ({
   state: { KoreaReducer: stateKorea },
@@ -58,22 +59,15 @@ const Home = ({
   }, []);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "white",
-      }}
-    >
+    <HomeContainer>
       <View style={{ flex: 0.5, backgroundColor: "green" }}></View>
       <PublicHeader updatedAt={stateKorea[0].createDt} />
-      <ScrollView style={{ width: "100%", height: "100%", flex: 1 }}>
+      <PublicScroll>
         {stateKorea.map((item, idx) => (
           <PublicItem item={item} key={item.gubun + idx} />
         ))}
-      </ScrollView>
-    </View>
+      </PublicScroll>
+    </HomeContainer>
   );
 };
 
