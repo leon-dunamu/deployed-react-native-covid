@@ -15,11 +15,11 @@ const INITIAL_STATE = [
 ];
 
 export const MapReducer = (state = INITIAL_STATE, action) => {
-  console.log("actiontype : ", action.type);
+  console.log("map reducer : ", action.type);
   switch (action.type) {
     case ActionType.SAVE_CORONAMAP:
-      return [...state];
+      return action.state;
     default:
-      return INITIAL_STATE;
+      return state;
   }
 };

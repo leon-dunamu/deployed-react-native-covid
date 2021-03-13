@@ -1,4 +1,4 @@
-const PUBLIC_KOREA_API_KEY = process.env.PUBLIC_KOREA_API_KEY;
+import { PUBLIC_KOREA_API_KEY } from "./keys";
 
 // time 형식은 YYYYMMDD
 export const PUBLIC_KOREA_URL = (NowTime) => `
