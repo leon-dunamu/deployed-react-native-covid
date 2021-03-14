@@ -25,7 +25,7 @@ const initType = {
 let INITIAL_STATE = Array(17).fill(initType);
 
 export const KoreaReducer = (state = INITIAL_STATE, action) => {
-  console.log("kr reducer : ", action.type, action.order);
+  // console.log("kr reducer : ", action.type);
   switch (action.type) {
     case ActionType.SAVE_KOREA:
       action.state.sort((a, b) => b.incDec - a.incDec);

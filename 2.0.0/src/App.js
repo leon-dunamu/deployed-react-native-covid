@@ -5,10 +5,12 @@ import store from "./store/index";
 
 const Store = store();
 
-const App = () => (
-  <Provider store={Store}>
-    <Router />
-  </Provider>
-);
+const App = () => {
+  return (
+    <Provider store={Store}>
+      <Router />
+    </Provider>
+  );
+};
 
 export default App;

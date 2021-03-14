@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "covid19jisu.app"
-               BlueprintName = "covid19jisu"
-               ReferencedContainer = "container:covid19jisu.xcodeproj">
+               BuildableName = "코로나 지수.app"
+               BlueprintName = "코로나 지수"
+               ReferencedContainer = "container:코로나 지수.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "covid19jisuTests.xctest"
-               BlueprintName = "covid19jisuTests"
-               ReferencedContainer = "container:covid19jisu.xcodeproj">
+               BuildableName = "코로나 지수Tests.xctest"
+               BlueprintName = "코로나 지수Tests"
+               ReferencedContainer = "container:코로나 지수.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "covid19jisu.app"
-            BlueprintName = "covid19jisu"
-            ReferencedContainer = "container:covid19jisu.xcodeproj">
+            BuildableName = "코로나 지수.app"
+            BlueprintName = "코로나 지수"
+            ReferencedContainer = "container:코로나 지수.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "covid19jisu.app"
-            BlueprintName = "covid19jisu"
-            ReferencedContainer = "container:covid19jisu.xcodeproj">
+            BuildableName = "코로나 지수.app"
+            BlueprintName = "코로나 지수"
+            ReferencedContainer = "container:코로나 지수.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

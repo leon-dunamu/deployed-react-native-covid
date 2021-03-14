@@ -1024,7 +1024,7 @@
 		DC40C4D4A3BB7A62CF04ED6BC8CE5B11 /* RNSScreenContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 44A1E259BCDC7D29F8F3EA54CF09C2DD /* RNSScreenContainer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DC90EC6092565FD256734B2F00362433 /* REACallFuncNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CE15177401B6BBBCFB8D41B5BE40DC25 /* REACallFuncNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DC937786A39FD1DF53937F2A239AFCFA /* RCTEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CBB84E68CA03205685DEC97382FAE3 /* RCTEventEmitter.m */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-documentation"; }; };
-		DCCD517BB15D2A442A8106D3AC0A227B /* Pods-covid19jisu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD8C1D2699DED7F20EDB5E6A84DD1F /* Pods-covid19jisu-dummy.m */; };
+		DCCD517BB15D2A442A8106D3AC0A227B /* Pods-코로나 지수-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD8C1D2699DED7F20EDB5E6A84DD1F /* Pods-코로나 지수-dummy.m */; };
 		DD3FD879397735569999E1D8C7FCB950 /* RCTWebSocketModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A298843D55ACDB3E983E4EE00DCBB60 /* RCTWebSocketModule.mm */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-nullability-completeness"; }; };
 		DD418A1AEA96FD8F973259DFCD2BC6E2 /* RCTImageShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D59C0BE1A046FA5BB95C19BB7186F356 /* RCTImageShadowView.m */; settings = {COMPILER_FLAGS = "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -Wno-nullability-completeness"; }; };
 		DD6B21DB0724AEB5A291CDB6CBCA1C48 /* EXFileSystemLocalFileHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B11ED35B09D863928A01B222BA9380C /* EXFileSystemLocalFileHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -2518,7 +2518,7 @@
 		04CCEA230FD60E92D8982F07BAC230D5 /* EXKeepAwake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EXKeepAwake-dummy.m"; sourceTree = "<group>"; };
 		04F9D67916A3A4857332CA47A83AF485 /* RCTDecayAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTDecayAnimation.m; sourceTree = "<group>"; };
 		050521DD112F33982EF80B297083EA43 /* React-RCTAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "React-RCTAnimation-dummy.m"; sourceTree = "<group>"; };
-		050BC740778C2518FFB4CEAFCB616F7B /* Pods-covid19jisu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-covid19jisu.debug.xcconfig"; sourceTree = "<group>"; };
+		050BC740778C2518FFB4CEAFCB616F7B /* Pods-코로나 지수.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-코로나 지수.debug.xcconfig"; sourceTree = "<group>"; };
 		052D0F8F9EF898C0E542973161432A94 /* EXSQLite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXSQLite.m; path = EXSQLite/EXSQLite.m; sourceTree = "<group>"; };
 		056DFD1CC031A34BFD20272D42350714 /* RCTSurfaceRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurfaceRootView.h; sourceTree = "<group>"; };
 		062B425E5CE0ABACB04E19AD483350C7 /* UMCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UMCore-prefix.pch"; sourceTree = "<group>"; };
@@ -2596,7 +2596,7 @@
 		13438166426173EB3E81BB2393520058 /* RNScreens.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RNScreens.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1347181EF80581B2FA0DACB3F0ADEE69 /* YGConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGConfig.h; path = yoga/YGConfig.h; sourceTree = "<group>"; };
 		134D8FBD82C9697721EFF8F454F3AF53 /* RCTCxxUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTCxxUtils.mm; sourceTree = "<group>"; };
-		13B8EB841112BD5E22909875098C3559 /* Pods-covid19jisu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-covid19jisu-acknowledgements.plist"; sourceTree = "<group>"; };
+		13B8EB841112BD5E22909875098C3559 /* Pods-코로나 지수-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-코로나 지수-acknowledgements.plist"; sourceTree = "<group>"; };
 		13C77A3A337C536B1743EB2EFA5B4C27 /* React-RCTBlob.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = "React-RCTBlob.podspec"; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		13EF8FE1D30D42F23C0A8BCCA76705ED /* EXApplication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EXApplication-dummy.m"; sourceTree = "<group>"; };
 		1411F02ED0EE908405E4927BD2591CBC /* RCTComponentEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTComponentEvent.h; sourceTree = "<group>"; };
@@ -3164,7 +3164,7 @@
 		818C312AA07C905A573C7AE2C9AF7D14 /* EXUpdatesSelectionPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = EXUpdatesSelectionPolicy.h; sourceTree = "<group>"; };
 		8196E76F5FD1ACB30E41309704EDC7B4 /* EXSessionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = EXSessionHandler.h; sourceTree = "<group>"; };
 		81AD829E9C6E42DC783CFFFE6A44B63B /* React-jsi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "React-jsi.release.xcconfig"; sourceTree = "<group>"; };
-		81CD8C1D2699DED7F20EDB5E6A84DD1F /* Pods-covid19jisu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-covid19jisu-dummy.m"; sourceTree = "<group>"; };
+		81CD8C1D2699DED7F20EDB5E6A84DD1F /* Pods-코로나 지수-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-코로나 지수-dummy.m"; sourceTree = "<group>"; };
 		8259E37FF3687DB91CCCEE0819B28F25 /* RCTProgressViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTProgressViewManager.h; sourceTree = "<group>"; };
 		8263FC16A47A5BD81AE419FD2AA1CC35 /* Folly-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Folly-prefix.pch"; sourceTree = "<group>"; };
 		82798A248AC59370A02D5659D84DB7D3 /* RNRotationHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RNRotationHandler.m; sourceTree = "<group>"; };
@@ -3451,7 +3451,7 @@
 		BD28B3F315D67805BC6CA4D73F6CE5F5 /* ReactCommon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReactCommon-dummy.m"; sourceTree = "<group>"; };
 		BD71E2539823621820F84384064C253A /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libReact-Core.a"; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8A44B9ACFDCC049BAB2F18771AB751 /* UMConstantsInterface.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMConstantsInterface.debug.xcconfig; sourceTree = "<group>"; };
-		BD9D64CF3AE52D20E9241B62A23E5CC1 /* Pods-covid19jisu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-covid19jisu-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BD9D64CF3AE52D20E9241B62A23E5CC1 /* Pods-코로나 지수-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-코로나 지수-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BE05C4A72F99560AC427C44CB6E8DBE0 /* RCTI18nManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTI18nManager.h; path = React/CoreModules/RCTI18nManager.h; sourceTree = "<group>"; };
 		BE126E9F83A1689459819696D7DC7D8A /* UMTaskServiceInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UMTaskServiceInterface.h; path = UMTaskManagerInterface/UMTaskServiceInterface.h; sourceTree = "<group>"; };
 		BE53E2733538A106DC196F8965FA66B7 /* InspectorInterfaces.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = InspectorInterfaces.cpp; sourceTree = "<group>"; };
@@ -3460,7 +3460,7 @@
 		BED17269B96D9DC68D770696A6DEF130 /* RCTDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTDeviceInfo.h; path = React/CoreModules/RCTDeviceInfo.h; sourceTree = "<group>"; };
 		BEE3A92DBE7DCA7EDE13045041822ED6 /* RCTI18nManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTI18nManager.mm; sourceTree = "<group>"; };
 		BF0A952D3E6ED1A6286B63ADD516160C /* RCTUITextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTUITextField.h; sourceTree = "<group>"; };
-		BF8144A9DAE02B8768410D9952F28BCA /* libPods-covid19jisu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-covid19jisu.a"; path = "libPods-covid19jisu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8144A9DAE02B8768410D9952F28BCA /* libPods-코로나 지수.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-코로나 지수.a"; path = "libPods-코로나 지수.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9BCA3B2D474988E5C8643AA71AC4FE /* React-Core-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "React-Core-prefix.pch"; sourceTree = "<group>"; };
 		C0410649A19D578551AFE6C2410CC85B /* RCTNetworkPlugins.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTNetworkPlugins.h; path = Libraries/Network/RCTNetworkPlugins.h; sourceTree = "<group>"; };
 		C046170DF7DDAA9B75A0EFAF6CBE7CF5 /* RCTBlobManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTBlobManager.h; path = Libraries/Blob/RCTBlobManager.h; sourceTree = "<group>"; };
@@ -3532,7 +3532,7 @@
 		D132F6334A9C77012B555E2DC9717AC8 /* RCTPackagerClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTPackagerClient.m; sourceTree = "<group>"; };
 		D184F05BA0694611B3F1B01CEC5983EC /* RCTReconnectingWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RCTReconnectingWebSocket.m; path = Libraries/WebSocket/RCTReconnectingWebSocket.m; sourceTree = "<group>"; };
 		D19F5E5A3C5F236D32C4BA0F04622634 /* JSBundleType.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = JSBundleType.cpp; sourceTree = "<group>"; };
-		D1D30C27665CD5CCCAF55DB373E978A5 /* Pods-covid19jisu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-covid19jisu.release.xcconfig"; sourceTree = "<group>"; };
+		D1D30C27665CD5CCCAF55DB373E978A5 /* Pods-코로나 지수.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-코로나 지수.release.xcconfig"; sourceTree = "<group>"; };
 		D1F2C753A969A7CDEBFE96364F22134B /* EXLinearGradientManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EXLinearGradientManager.m; path = EXLinearGradient/EXLinearGradientManager.m; sourceTree = "<group>"; };
 		D2CBDF1F4069BB4E8F233BC6E5DA9B43 /* RCTScrollContentShadowView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTScrollContentShadowView.m; sourceTree = "<group>"; };
 		D379EFE89B88C3C3A6EA796025202C7D /* RCTSurfaceHostingProxyRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTSurfaceHostingProxyRootView.h; sourceTree = "<group>"; };
@@ -3596,7 +3596,7 @@
 		DEFD9D06E7F226D82C7CA724AAB06F66 /* RCTImageURLLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RCTImageURLLoader.h; path = Libraries/Image/RCTImageURLLoader.h; sourceTree = "<group>"; };
 		DF68B03DC99F4E3F8C243796E12EFE06 /* YGValue.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = YGValue.cpp; path = yoga/YGValue.cpp; sourceTree = "<group>"; };
 		DF7B053802B29E7F59D7453F0B8FEA0A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DFED302746E11B6505BD934B19028F38 /* Pods-covid19jisu-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-covid19jisu-resources.sh"; sourceTree = "<group>"; };
+		DFED302746E11B6505BD934B19028F38 /* Pods-코로나 지수-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-코로나 지수-resources.sh"; sourceTree = "<group>"; };
 		E001DD131345A4979954A014BF7CED35 /* UMModuleRegistryHolderReactModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UMModuleRegistryHolderReactModule.h; sourceTree = "<group>"; };
 		E050E6D47F6E906946A9F188D21ED08C /* React-RCTNetwork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "React-RCTNetwork-dummy.m"; sourceTree = "<group>"; };
 		E059595CF50025F3C02574351A835D6C /* RCTSettingsPlugins.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTSettingsPlugins.mm; sourceTree = "<group>"; };
@@ -6543,7 +6543,7 @@
 		C16B611D3489BDE75902194D1FC56022 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D9C46FBC931B5068F6D842BE3B859975 /* Pods-covid19jisu */,
+				D9C46FBC931B5068F6D842BE3B859975 /* Pods-코로나 지수 */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -6713,7 +6713,7 @@
 				ABFEEA82A6C346B22843FBE0B0582182 /* libFBReactNativeSpec.a */,
 				06489499588BFA8FD5E63DD6375CD533 /* libFolly.a */,
 				3CA7A9404CCDD6BA22C97F8348CE3209 /* libglog.a */,
-				BF8144A9DAE02B8768410D9952F28BCA /* libPods-covid19jisu.a */,
+				BF8144A9DAE02B8768410D9952F28BCA /* libPods-코로나 지수.a */,
 				F958876A082BF810B342435CE3FB5AF6 /* libRCTTypeSafety.a */,
 				BD71E2539823621820F84384064C253A /* libReact-Core.a */,
 				6771D231F4C8C5976470A369C474B32E /* libReact-CoreModules.a */,
@@ -6916,18 +6916,18 @@
 			name = RCTNetworkHeaders;
 			sourceTree = "<group>";
 		};
-		D9C46FBC931B5068F6D842BE3B859975 /* Pods-covid19jisu */ = {
+		D9C46FBC931B5068F6D842BE3B859975 /* Pods-코로나 지수 */ = {
 			isa = PBXGroup;
 			children = (
-				BD9D64CF3AE52D20E9241B62A23E5CC1 /* Pods-covid19jisu-acknowledgements.markdown */,
-				13B8EB841112BD5E22909875098C3559 /* Pods-covid19jisu-acknowledgements.plist */,
-				81CD8C1D2699DED7F20EDB5E6A84DD1F /* Pods-covid19jisu-dummy.m */,
-				DFED302746E11B6505BD934B19028F38 /* Pods-covid19jisu-resources.sh */,
-				050BC740778C2518FFB4CEAFCB616F7B /* Pods-covid19jisu.debug.xcconfig */,
-				D1D30C27665CD5CCCAF55DB373E978A5 /* Pods-covid19jisu.release.xcconfig */,
+				BD9D64CF3AE52D20E9241B62A23E5CC1 /* Pods-코로나 지수-acknowledgements.markdown */,
+				13B8EB841112BD5E22909875098C3559 /* Pods-코로나 지수-acknowledgements.plist */,
+				81CD8C1D2699DED7F20EDB5E6A84DD1F /* Pods-코로나 지수-dummy.m */,
+				DFED302746E11B6505BD934B19028F38 /* Pods-코로나 지수-resources.sh */,
+				050BC740778C2518FFB4CEAFCB616F7B /* Pods-코로나 지수.debug.xcconfig */,
+				D1D30C27665CD5CCCAF55DB373E978A5 /* Pods-코로나 지수.release.xcconfig */,
 			);
-			name = "Pods-covid19jisu";
-			path = "Target Support Files/Pods-covid19jisu";
+			name = "Pods-코로나 지수";
+			path = "Target Support Files/Pods-코로나 지수";
 			sourceTree = "<group>";
 		};
 		DA22954F628E9A39D9110AB11B7EEBAA /* Support Files */ = {
@@ -8535,9 +8535,9 @@
 			productReference = C1A919103EAC9813D236486C34FC0A21 /* libReact-RCTVibration.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		5FF4D24E17A91BB80122C76C4D3E748E /* Pods-covid19jisu */ = {
+		5FF4D24E17A91BB80122C76C4D3E748E /* Pods-코로나 지수 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 015CDAD313A530F29A7AF62F80809AF7 /* Build configuration list for PBXNativeTarget "Pods-covid19jisu" */;
+			buildConfigurationList = 015CDAD313A530F29A7AF62F80809AF7 /* Build configuration list for PBXNativeTarget "Pods-코로나 지수" */;
 			buildPhases = (
 				66835A521A914087E4487D2CA6E10A0E /* Headers */,
 				98F24409FB9A6FF9ED43334F4310DF5D /* Sources */,
@@ -8604,9 +8604,9 @@
 				E187B454B5FB0CDEA21478ADE7B2E3FC /* PBXTargetDependency */,
 				2793A091559300AED9B6677FE96D1F79 /* PBXTargetDependency */,
 			);
-			name = "Pods-covid19jisu";
-			productName = "Pods-covid19jisu";
-			productReference = BF8144A9DAE02B8768410D9952F28BCA /* libPods-covid19jisu.a */;
+			name = "Pods-코로나 지수";
+			productName = "Pods-코로나 지수";
+			productReference = BF8144A9DAE02B8768410D9952F28BCA /* libPods-코로나 지수.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		60A93BD329C1F1B39EB3EFEC0B650A20 /* EXUpdates */ = {
@@ -9253,7 +9253,7 @@
 				C3496D0495E700CF08A90C41EA8FA4BB /* FBReactNativeSpec */,
 				A4F685BE3CAC127BDCE4E0DBBD88D191 /* Folly */,
 				D0EFEFB685D97280256C559792236873 /* glog */,
-				5FF4D24E17A91BB80122C76C4D3E748E /* Pods-covid19jisu */,
+				5FF4D24E17A91BB80122C76C4D3E748E /* Pods-코로나 지수 */,
 				E7E7CE52C8C68B17224FF8C262D80ABF /* RCTRequired */,
 				D20469A9A1E5CFB26045EAEBE3F88E5E /* RCTTypeSafety */,
 				1BEE828C124E6416179B904A9F66D794 /* React */,
@@ -9775,7 +9775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCCD517BB15D2A442A8106D3AC0A227B /* Pods-covid19jisu-dummy.m in Sources */,
+				DCCD517BB15D2A442A8106D3AC0A227B /* Pods-코로나 지수-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -12587,7 +12587,7 @@
 		};
 		7C5CEFCF361CA5C04ECD372836D2A837 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 050BC740778C2518FFB4CEAFCB616F7B /* Pods-covid19jisu.debug.xcconfig */;
+			baseConfigurationReference = 050BC740778C2518FFB4CEAFCB616F7B /* Pods-코로나 지수.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -13264,7 +13264,7 @@
 		};
 		B3910030DC5E1F6B8FF8336886FD61A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1D30C27665CD5CCCAF55DB373E978A5 /* Pods-covid19jisu.release.xcconfig */;
+			baseConfigurationReference = D1D30C27665CD5CCCAF55DB373E978A5 /* Pods-코로나 지수.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -14073,7 +14073,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		015CDAD313A530F29A7AF62F80809AF7 /* Build configuration list for PBXNativeTarget "Pods-covid19jisu" */ = {
+		015CDAD313A530F29A7AF62F80809AF7 /* Build configuration list for PBXNativeTarget "Pods-코로나 지수" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7C5CEFCF361CA5C04ECD372836D2A837 /* Debug */,

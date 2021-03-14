@@ -1,4 +1,4 @@
-rootProject.name = 'covid19jisu'
+rootProject.name = '코로나지수'
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()
