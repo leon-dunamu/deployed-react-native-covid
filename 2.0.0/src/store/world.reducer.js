@@ -19,7 +19,7 @@ const initType = {
 const INITIAL_STATE = Array(20).fill(initType);
 
 export const WorldReducer = (state = INITIAL_STATE, action) => {
-  console.log("other reducer : ", action.type);
+  // console.log("other reducer : ", action.type);
   switch (action.type) {
     case ActionType.SAVE_WORLD:
       action.state.sort((a, b) => b.natDefCnt - a.natDefCnt);

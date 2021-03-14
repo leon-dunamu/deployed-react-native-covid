@@ -14,7 +14,7 @@ const initType = {
 const INITIAL_STATE = Array(18).fill(initType);
 
 export const VaccineReducer = (state = INITIAL_STATE, action) => {
-  console.log("vaccine reducer : ", action.type);
+  // console.log("vaccine reducer : ", action.type);
   switch (action.type) {
     case ActionType.SAVE_VACCINE:
       return action.state;

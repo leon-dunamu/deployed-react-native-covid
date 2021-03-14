@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, FlatList } from "react-native";
 import { connect } from "react-redux";
 import { getNews } from "../../api/api-news";
 import { PublicNewsItem } from "../../components/public.item";
@@ -16,11 +16,10 @@ import { Title, TitleContainer } from "../world/World.styled";
 
 const News = ({
   state: { NewsReducer: stateNews },
-  saveNews,
   saveMoreNews,
   navigation,
 }) => {
-  const [index, setIndex] = React.useState(1);
+  const [index, setIndex] = React.useState(2);
 
   const _handleLoadMore = () => {
     getNewsData();
@@ -36,17 +35,12 @@ const News = ({
     } finally {
       const item = nwResult.data.response.body.items.item;
       if (item) {
-        if (index === 1) saveNews(item);
-        else saveMoreNews(item);
+        saveMoreNews(item);
 
         setIndex((prev) => prev + 1);
       }
     }
   };
-
-  React.useEffect(() => {
-    getNewsData();
-  }, []);
 
   return (
     <View

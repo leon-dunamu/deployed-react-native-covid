@@ -12,7 +12,7 @@ const initType = {
 const INITIAL_STATE = Array(20).fill(initType);
 
 export const NewsReducer = (state = INITIAL_STATE, action) => {
-  console.log("news reducer : ", action.type);
+  // console.log("news reducer : ", action.type);
   switch (action.type) {
     case ActionType.SAVE_NEWS:
       return action.state;

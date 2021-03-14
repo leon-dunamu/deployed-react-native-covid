@@ -9,7 +9,6 @@ const getCoordinate = async () => {
   try {
     await Location.requestPermissionsAsync();
     coords = (await Location.getLastKnownPositionAsync()).coords; // getCurrentPositionAsync
-    console.log(coords.latitude, coords.longitude);
   } catch (e) {
     console.log("location error", e);
   } finally {

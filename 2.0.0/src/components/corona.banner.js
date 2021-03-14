@@ -107,7 +107,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
             {state.isLoading ? null : (
               <>
                 <s.iCount styles={{ fontWeight: "bold" }}>
-                  {regionData.gubun}
+                  {regionData && regionData.gubun}
                 </s.iCount>
                 <s.iCount> | 누적</s.iCount>
                 <s.iCount
@@ -117,7 +117,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
                     fontSize: "18px",
                   }}
                 >
-                  {regionData.defCnt}명
+                  {regionData && regionData.defCnt}명
                 </s.iCount>
               </>
             )}
@@ -127,11 +127,11 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
               <>
                 <Ionicons name="caret-up" color={color.red} />
                 <s.iCount styles={{ color: color.red, marginRight: "8px" }}>
-                  {regionData.incDec}
+                  {regionData && regionData.incDec}
                 </s.iCount>
                 <s.iCount>
-                  (지역 : {regionData.localOccCnt}명 / 해외 :{" "}
-                  {regionData.overFlowCnt}명)
+                  (지역 : {regionData && regionData.localOccCnt}명 / 해외 :{" "}
+                  {regionData && regionData.overFlowCnt}명)
                 </s.iCount>
               </>
             )}

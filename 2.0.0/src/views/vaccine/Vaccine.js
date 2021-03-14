@@ -4,41 +4,14 @@
  */
 
 import React from "react";
-import { View, Text, FlatList } from "react-native";
-import moment from "moment";
-import { getKoreaVaccine, VACCINE_BASE_DATE } from "../../api/api-vaccine";
+import { FlatList } from "react-native";
 import { connect } from "react-redux";
-import {
-  mapDispatchToPropsFromStore,
-  mapStateToPropsFromStore,
-} from "../../store/actions";
+import { mapStateToPropsFromStore } from "../../store/actions";
 import VaccineHeader from "../../components/vaccine.header";
 import { Title, TitleContainer, VaccineContainer } from "./Vaccine.styled";
 import { PublicVaccineItem } from "../../components/public.item";
 
-const Vaccine = ({ state: { VaccineReducer: stateVaccine }, saveVaccine }) => {
-  React.useEffect(() => {
-    const getVaccineData = async () => {
-      let vcResult = null;
-
-      try {
-        const nowDate =
-          new Date().getHours() > 9
-            ? moment(nowDate)
-            : moment(nowDate).subtract(1, "days");
-        const pageIndex = nowDate.diff(VACCINE_BASE_DATE, "days") + 1;
-
-        vcResult = await getKoreaVaccine(pageIndex);
-      } catch (e) {
-        console.log("vaccine api error", e);
-      } finally {
-        vcResult.data.data && saveVaccine(vcResult.data.data);
-      }
-    };
-
-    getVaccineData();
-  }, []);
-
+const Vaccine = ({ state: { VaccineReducer: stateVaccine } }) => {
   return (
     <VaccineContainer>
       <TitleContainer>
@@ -57,7 +30,4 @@ const Vaccine = ({ state: { VaccineReducer: stateVaccine }, saveVaccine }) => {
   );
 };
 
-export default connect(
-  mapStateToPropsFromStore,
-  mapDispatchToPropsFromStore
-)(Vaccine);
+export default connect(mapStateToPropsFromStore, null)(Vaccine);

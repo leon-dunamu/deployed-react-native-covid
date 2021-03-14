@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_covid19jisu : NSObject
+@interface PodsDummy_Pods_코로나 지수 : NSObject
 @end
-@implementation PodsDummy_Pods_covid19jisu
+@implementation PodsDummy_Pods_코로나 지수
 @end

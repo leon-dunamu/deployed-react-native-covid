@@ -1,4 +1,4 @@
-package com.covid19jisu.generated;
+package com.ws.covid.generated;
 
 import java.util.Arrays;
 import java.util.List;
