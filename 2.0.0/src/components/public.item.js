@@ -77,8 +77,16 @@ export const PublicItem = ({ item }) => {
             {isolClearCnt}
           </s.Title>
           <s.UpView styles={{ flex: 4 }}>
-            {isolIngCnt ? <Ionicons name="caret-up" color={color.red} /> : null}
-            <s.Title styles={isolIngCnt ? upstyles : nonestyles}>
+            {isolIngCnt ? (
+              <Ionicons name="caret-up" color={color.dark_blue} />
+            ) : null}
+            <s.Title
+              styles={
+                isolIngCnt
+                  ? { ...upstyles, color: color.dark_blue }
+                  : { ...nonestyles }
+              }
+            >
               {isolIngCnt}
             </s.Title>
           </s.UpView>

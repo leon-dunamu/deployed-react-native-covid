@@ -11,4 +11,5 @@ export const color = {
   light_purple: "#a29bfe",
   red: "#e15f41",
   black: "#555",
+  dark_blue: "#2980b9",
 };

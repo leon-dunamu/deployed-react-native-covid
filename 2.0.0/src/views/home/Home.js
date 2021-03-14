@@ -4,7 +4,6 @@
  */
 
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
 import { connect } from "react-redux";
 import moment from "moment";
 import {
@@ -16,13 +15,13 @@ import { getKoreaCorona } from "../../api/api-korea";
 import { PublicItem } from "../../components/public.item";
 import PublicHeader from "../../components/public.header";
 import { HomeContainer, PublicScroll } from "./Home.styled";
+import CoronaBanner from "../../components/corona.banner";
 
 const Home = ({
   state: { KoreaReducer: stateKorea },
   saveCoronamap,
   saveKorea,
 }) => {
-  console.log("render!");
   React.useEffect(() => {
     const getMapData = async () => {
       let mapResult = null;
@@ -60,7 +59,7 @@ const Home = ({
 
   return (
     <HomeContainer>
-      <View style={{ flex: 0.5, backgroundColor: "green" }}></View>
+      <CoronaBanner />
       <PublicHeader updatedAt={stateKorea[0].createDt} />
       <PublicScroll>
         {stateKorea.map((item, idx) => (
