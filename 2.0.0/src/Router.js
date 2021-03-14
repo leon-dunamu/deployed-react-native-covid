@@ -8,7 +8,10 @@ import "react-native-gesture-handler";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from "@react-navigation/stack";
 
 import { color } from "./assets/style/color";
 
@@ -26,6 +29,7 @@ const StackNavigator = () => (
   <Stack.Navigator
     screenOptions={{
       headerShown: false,
+      cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
     }}
   >
     <Stack.Screen name="NEWS" component={News} />
