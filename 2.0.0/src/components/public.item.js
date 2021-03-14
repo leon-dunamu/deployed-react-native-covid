@@ -158,3 +158,43 @@ export const PublicWorldItem = ({ item, index }) => {
     </>
   );
 };
+
+export const PublicVaccineItem = ({ item }) => (
+  <s.ItemContainer>
+    <s.ItemTitle
+      styles={{
+        marginRight: "3px",
+        flex: 5,
+        backgroundColor: color.theme[6],
+      }}
+    >
+      <s.Title>{item.sido}</s.Title>
+    </s.ItemTitle>
+    <s.ItemBody
+      styles={{
+        marginRight: "3px",
+        flex: 6,
+        backgroundColor: color.theme[6],
+      }}
+    >
+      <s.Title>
+        {item.firstCnt >= 0 ? `${splitNumber(item.firstCnt)}명` : ""} /
+        {item.secondCnt >= 0 ? ` ${splitNumber(item.secondCnt)}명` : ""}
+      </s.Title>
+    </s.ItemBody>
+    <s.ItemBody
+      styles={{
+        flex: 7,
+        backgroundColor: color.theme[6],
+      }}
+    >
+      <s.Title>
+        {item.totalFirstCnt >= 0 ? `${splitNumber(item.totalFirstCnt)}명` : ""}{" "}
+        /
+        {item.totalSecondCnt >= 0
+          ? ` ${splitNumber(item.totalSecondCnt)}명`
+          : ""}
+      </s.Title>
+    </s.ItemBody>
+  </s.ItemContainer>
+);

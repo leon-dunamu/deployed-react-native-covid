@@ -13,7 +13,7 @@ import {
 import { getWorldCorona } from "../../api/api-world";
 import { PublicWorldItem } from "../../components/public.item";
 import WorldHeader from "../../components/world.header";
-import { HomeContainer } from "../home/Home.styled";
+import { WorldContainer } from "./World.styled";
 import { FlatList } from "react-native";
 
 const World = ({ state: { WorldReducer: stateWorld }, saveWorld }) => {
@@ -41,7 +41,7 @@ const World = ({ state: { WorldReducer: stateWorld }, saveWorld }) => {
   }, []);
 
   return (
-    <HomeContainer>
+    <WorldContainer>
       <WorldHeader updatedAt={stateWorld[0].createDt} />
       <FlatList
         style={{ flex: 1, width: "100%", height: "100%" }}
@@ -51,7 +51,7 @@ const World = ({ state: { WorldReducer: stateWorld }, saveWorld }) => {
           <PublicWorldItem item={item} index={index} />
         )}
       />
-    </HomeContainer>
+    </WorldContainer>
   );
 };
 

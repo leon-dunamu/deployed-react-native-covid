@@ -6,6 +6,8 @@ export const SORT_KOREA_REGION = "SORT_KOREA_REGION";
 
 export const SAVE_WORLD = "SAVE_WORLD";
 
+export const SAVE_VACCINE = "SAVE_VACCINE";
+
 export const mapStateToPropsFromStore = (state) => ({
   state: state,
 });
@@ -40,6 +42,12 @@ export const mapDispatchToPropsFromStore = (dispatch) => ({
   saveWorld: (state) =>
     dispatch({
       type: SAVE_WORLD,
+      state,
+    }),
+
+  saveVaccine: (state) =>
+    dispatch({
+      type: SAVE_VACCINE,
       state,
     }),
 });
