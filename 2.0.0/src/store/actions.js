@@ -4,7 +4,7 @@ export const SAVE_KOREA = "SAVE_KOREA";
 export const SORT_KOREA_INCDEC = "SORT_KOREA_INCDEC";
 export const SORT_KOREA_REGION = "SORT_KOREA_REGION";
 
-export const SAVE_OTHER = "SAVE_OTHER";
+export const SAVE_WORLD = "SAVE_WORLD";
 
 export const mapStateToPropsFromStore = (state) => ({
   state: state,
@@ -37,9 +37,9 @@ export const mapDispatchToPropsFromStore = (dispatch) => ({
       state,
     }),
 
-  saveOther: (state) =>
+  saveWorld: (state) =>
     dispatch({
-      type: SAVE_OTHER,
+      type: SAVE_WORLD,
       state,
     }),
 });

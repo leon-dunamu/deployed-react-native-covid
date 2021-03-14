@@ -1,17 +1,17 @@
 /**
  * @author wonseog
- * @description 세계현황
+ * @description 백신 동향
  */
 
 import React from "react";
 import { View, Text } from "react-native";
 
-const Other = () => {
+const Vaccine = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>other!</Text>
+      <Text>Vaccine!</Text>
     </View>
   );
 };
 
-export default Other;
+export default Vaccine;

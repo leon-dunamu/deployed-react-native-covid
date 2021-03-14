@@ -38,7 +38,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
     const coords = await getCoordinate();
     const patientCount = accumulateJisu(coords, MapReducer);
     const infoObj = accumulateCondition(patientCount);
-    const [city, street, region] = await getAddress(coords);
+    const [city, street, country, region] = await getAddress(coords);
 
     setTimeout(() => {
       setState({
@@ -46,7 +46,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
         coords,
         address: `${city} ${street}`,
         patientCount,
-        isLoading: false,
+        isLoading: country === "KR" ? false : true,
         region,
         ...infoObj,
       });

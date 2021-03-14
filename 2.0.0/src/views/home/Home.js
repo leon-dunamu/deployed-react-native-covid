@@ -12,8 +12,8 @@ import {
 } from "../../store/actions";
 import { getCoronamapData } from "../../api/api-coronamap";
 import { getKoreaCorona } from "../../api/api-korea";
-import { PublicItem } from "../../components/public.item";
-import PublicHeader from "../../components/public.header";
+import { PublicKoreaItem } from "../../components/public.item";
+import KoreaHeader from "../../components/korea.header";
 import { HomeContainer, PublicScroll } from "./Home.styled";
 import CoronaBanner from "../../components/corona.banner";
 
@@ -60,10 +60,10 @@ const Home = ({
   return (
     <HomeContainer>
       <CoronaBanner />
-      <PublicHeader updatedAt={stateKorea[0].createDt} />
+      <KoreaHeader updatedAt={stateKorea[0].createDt} />
       <PublicScroll>
         {stateKorea.map((item, idx) => (
-          <PublicItem item={item} key={item.gubun + idx} />
+          <PublicKoreaItem item={item} key={item.gubun + idx} />
         ))}
       </PublicScroll>
     </HomeContainer>

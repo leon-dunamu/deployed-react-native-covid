@@ -8,7 +8,7 @@ import {
 import * as s from "./public.styled";
 import { color } from "../assets/style/color";
 
-const PublicHeader = ({
+const KoreaHeader = ({
   state: { KoreaReducer: stateKorea },
   sortKoreaByIncDec,
   sortKoreaByRegion,
@@ -83,4 +83,4 @@ const PublicHeader = ({
 export default connect(
   mapStateToPropsFromStore,
   mapDispatchToPropsFromStore
-)(PublicHeader);
+)(KoreaHeader);
