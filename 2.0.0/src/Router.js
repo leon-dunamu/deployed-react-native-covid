@@ -8,15 +8,30 @@ import "react-native-gesture-handler";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+
 import { color } from "./assets/style/color";
 
 import Home from "./views/home";
 import World from "./views/world";
 import Vaccine from "./views/vaccine";
 import Map from "./views/map";
-import News from "./views/tip";
+import News from "./views/news";
+import Article from "./views/news/article";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+const StackNavigator = () => (
+  <Stack.Navigator
+    screenOptions={{
+      headerShown: false,
+    }}
+  >
+    <Stack.Screen name="NEWS" component={News} />
+    <Stack.Screen name="ARTICLE" component={Article} />
+  </Stack.Navigator>
+);
 
 const Router = () => (
   <NavigationContainer>
@@ -51,7 +66,7 @@ const Router = () => (
       <Tab.Screen name="VACCINE" component={Vaccine} />
       <Tab.Screen name="KOREA" component={Home} />
       <Tab.Screen name="MAP" component={Map} />
-      <Tab.Screen name="NEWS" component={News} />
+      <Tab.Screen name="NEWS" component={StackNavigator} />
     </Tab.Navigator>
   </NavigationContainer>
 );

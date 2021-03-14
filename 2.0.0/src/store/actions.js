@@ -8,6 +8,9 @@ export const SAVE_WORLD = "SAVE_WORLD";
 
 export const SAVE_VACCINE = "SAVE_VACCINE";
 
+export const SAVE_NEWS = "SAVE_NEWS";
+export const SAVE_MORE_NEWS = "SAVE_MORE_NEWS";
+
 export const mapStateToPropsFromStore = (state) => ({
   state: state,
 });
@@ -48,6 +51,18 @@ export const mapDispatchToPropsFromStore = (dispatch) => ({
   saveVaccine: (state) =>
     dispatch({
       type: SAVE_VACCINE,
+      state,
+    }),
+
+  saveNews: (state) =>
+    dispatch({
+      type: SAVE_NEWS,
+      state,
+    }),
+
+  saveMoreNews: (state) =>
+    dispatch({
+      type: SAVE_MORE_NEWS,
       state,
     }),
 });

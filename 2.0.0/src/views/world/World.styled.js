@@ -6,3 +6,15 @@ export const WorldContainer = styled.View`
   align-items: center;
   background-color: white;
 `;
+
+export const TitleContainer = styled.View`
+  height: 48px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Title = styled.Text`
+  font-weight: bold;
+  font-size: 20px;
+`;

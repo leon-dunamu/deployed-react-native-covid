@@ -3,6 +3,7 @@ import { splitNumber } from "../components/split.number";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { color } from "../assets/style/color";
 import * as s from "./public.styled";
+import moment from "moment";
 
 export const PublicKoreaItem = ({ item }) => {
   const {
@@ -104,15 +105,15 @@ const nonestyles = { textAlign: "left", marginLeft: "8px", color: color.black };
 export const PublicWorldItem = ({ item, index }) => {
   let backgroundColor = "";
   if (item.nationNm) {
-    if (index === 0) {
+    if (index < 3) {
       backgroundColor = color.theme[5];
-    } else if (index === 1) {
+    } else if (index < 10) {
       backgroundColor = color.theme[4];
-    } else if (index === 2) {
+    } else if (index < 20) {
       backgroundColor = color.theme[3];
-    } else if (index === 3) {
+    } else if (index < 50) {
       backgroundColor = color.theme[2];
-    } else if (index === 4) {
+    } else if (index < 100) {
       backgroundColor = color.theme[1];
     } else {
       backgroundColor = color.theme[6];
@@ -165,7 +166,7 @@ export const PublicVaccineItem = ({ item }) => (
       styles={{
         marginRight: "3px",
         flex: 5,
-        backgroundColor: color.theme[6],
+        backgroundColor: color.theme[3],
       }}
     >
       <s.Title>{item.sido}</s.Title>
@@ -178,7 +179,7 @@ export const PublicVaccineItem = ({ item }) => (
       }}
     >
       <s.Title>
-        {item.firstCnt >= 0 ? `${splitNumber(item.firstCnt)}명` : ""} /
+        {item.firstCnt >= 0 ? `${splitNumber(item.firstCnt)}명 /` : ""}
         {item.secondCnt >= 0 ? ` ${splitNumber(item.secondCnt)}명` : ""}
       </s.Title>
     </s.ItemBody>
@@ -189,8 +190,9 @@ export const PublicVaccineItem = ({ item }) => (
       }}
     >
       <s.Title>
-        {item.totalFirstCnt >= 0 ? `${splitNumber(item.totalFirstCnt)}명` : ""}{" "}
-        /
+        {item.totalFirstCnt >= 0
+          ? `${splitNumber(item.totalFirstCnt)}명 /`
+          : ""}
         {item.totalSecondCnt >= 0
           ? ` ${splitNumber(item.totalSecondCnt)}명`
           : ""}
@@ -198,3 +200,47 @@ export const PublicVaccineItem = ({ item }) => (
     </s.ItemBody>
   </s.ItemContainer>
 );
+
+export const PublicNewsItem = ({ item, navigation }) => {
+  const onPressArticle = () => {
+    navigation.push("ARTICLE", { item });
+  };
+
+  return (
+    <s.ItemContainer>
+      <s.TouchItemTitle
+        onPress={onPressArticle}
+        styles={{
+          marginRight: "3px",
+          flex: 2,
+          backgroundColor: color.theme[3],
+        }}
+      >
+        <s.Title>
+          {item.wrtDt ? moment(item.wrtDt).format("YYMMDD") : ""}
+        </s.Title>
+      </s.TouchItemTitle>
+      <s.TouchItemBody
+        onPress={onPressArticle}
+        styles={{
+          marginRight: "3px",
+          flex: 8,
+          backgroundColor: color.theme[6],
+        }}
+      >
+        <s.Title styles={{ textAlign: "left", paddingLeft: "8px" }}>
+          {item.title ? `${item.title.substr(0, 18)} ..` : ""}
+        </s.Title>
+      </s.TouchItemBody>
+      <s.TouchItemBody
+        onPress={onPressArticle}
+        styles={{
+          flex: 3,
+          backgroundColor: color.theme[6],
+        }}
+      >
+        <s.Title>{item.countryName ? item.countryName : ""}</s.Title>
+      </s.TouchItemBody>
+    </s.ItemContainer>
+  );
+};
