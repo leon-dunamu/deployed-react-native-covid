@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const WorldContainer = styled.View`
+export const WorldContainer = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
   align-items: center;

@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, SafeAreaView } from "react-native";
 import { WebView } from "react-native-webview";
 import { GITPAGES_URL } from "../../config/urls";
 import { Height, Width } from "../../assets/style/dimension";
@@ -20,14 +20,16 @@ const Map = () => {
   const [isLoading, setLoading] = React.useState(true);
 
   return (
-    <WebView
-      source={{ uri: GITPAGES_URL }}
-      onLoad={() => setLoading(false)}
-      renderLoading={() => loading()}
-      startInLoadingState={true}
-      javaScriptEnabled={true}
-      domStorageEnabled={true}
-    />
+    <SafeAreaView>
+      <WebView
+        source={{ uri: GITPAGES_URL }}
+        onLoad={() => setLoading(false)}
+        renderLoading={() => loading()}
+        startInLoadingState={true}
+        javaScriptEnabled={true}
+        domStorageEnabled={true}
+      />
+    </SafeAreaView>
   );
 };
 

@@ -12,7 +12,7 @@ export const Title = styled.Text`
   font-size: 20px;
 `;
 
-export const VaccineContainer = styled.View`
+export const VaccineContainer = styled.SafeAreaView`
   flex: 1;
   justify-content: center;
   align-items: center;

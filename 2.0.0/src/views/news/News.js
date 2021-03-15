@@ -4,7 +4,7 @@
  */
 
 import React from "react";
-import { View, FlatList } from "react-native";
+import { View, FlatList, SafeAreaView } from "react-native";
 import { connect } from "react-redux";
 import { getNews } from "../../api/api-news";
 import { PublicNewsItem } from "../../components/public.item";
@@ -43,7 +43,7 @@ const News = ({
   };
 
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
         justifyContent: "center",
@@ -64,7 +64,7 @@ const News = ({
         onEndReached={_handleLoadMore}
         onEndReachedThreshold={1}
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
