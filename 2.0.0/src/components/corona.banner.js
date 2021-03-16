@@ -9,9 +9,9 @@ import getCoordinate from "../components/get.coordinate";
 import getAddress from "../components/get.address";
 import accumulateJisu from "./accumulate.jisu";
 import accumulateCondition from "./accumulate.condition";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import * as s from "./corona.styled";
 import { color } from "../assets/style/color";
+import { ReqireImage } from "./require.image";
 
 const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
   const [state, setState] = React.useState({
@@ -69,7 +69,16 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
         <s.ConditionWrapper>
           <s.cFace loading={state.isLoading}>
             {state.isLoading ? null : (
-              <Ionicons name={state.conditionFace} size={80}></Ionicons>
+              <>
+                <ReqireImage
+                  name={state.conditionFace}
+                  styles={{
+                    width: 80,
+                    height: 80,
+                    tintColor: "#666",
+                  }}
+                />
+              </>
             )}
           </s.cFace>
           <s.cTextContainer loading={state.isLoading}>
@@ -84,10 +93,14 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
                   {state.address}
                 </s.iAddress>
                 <s.RefreshButton onPress={() => getInfo()}>
-                  <Ionicons
+                  <ReqireImage
                     name="refresh-outline"
-                    style={{ marginLeft: 2 }}
-                    size={24}
+                    styles={{
+                      marginLeft: 2,
+                      width: 24,
+                      height: 24,
+                      tintColor: "#666",
+                    }}
                   />
                 </s.RefreshButton>
               </>
@@ -125,7 +138,12 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
           <s.Info loading={state.isLoading}>
             {state.isLoading ? null : (
               <>
-                <Ionicons name="caret-up" color={color.red} />
+                <ReqireImage
+                  name="caret-up"
+                  styles={{
+                    tintColor: color.red,
+                  }}
+                />
                 <s.iCount styles={{ color: color.red, marginRight: "8px" }}>
                   {regionData && regionData.incDec}
                 </s.iCount>

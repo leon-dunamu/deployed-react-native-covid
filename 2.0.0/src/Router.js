@@ -6,7 +6,6 @@
 import React from "react";
 import "react-native-gesture-handler";
 import SplashScreen from "react-native-splash-screen";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
@@ -33,6 +32,7 @@ import { getKoreaVaccine, VACCINE_BASE_DATE } from "./api/api-vaccine";
 import { getCoronamapData } from "./api/api-coronamap";
 import { getKoreaCorona } from "./api/api-korea";
 import { getNews } from "./api/api-news";
+import { ReqireImage } from "./components/require.image";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -107,6 +107,7 @@ const Router = ({
   }, []);
 
   React.useEffect(() => {
+    console.log("done");
     setTimeout(() => {
       SplashScreen.hide();
     }, 1700);
@@ -134,7 +135,13 @@ const Router = ({
             } else if (route.name === "VACCINE") {
               iconName = focused ? "eyedrop" : "eyedrop-outline";
             }
-            return <Ionicons name={iconName} size={size} color={color} />;
+
+            return (
+              <ReqireImage
+                name={iconName}
+                styles={{ width: size, height: size, tintColor: color }}
+              />
+            );
           },
         })}
         tabBarOptions={{

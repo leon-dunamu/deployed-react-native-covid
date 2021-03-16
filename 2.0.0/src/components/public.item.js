@@ -1,9 +1,10 @@
 import React from "react";
 import { splitNumber } from "../components/split.number";
-import Ionicons from "react-native-vector-icons/Ionicons";
 import { color } from "../assets/style/color";
 import * as s from "./public.styled";
 import moment from "moment";
+import { ReqireImage } from "./require.image";
+import { View } from "react-native";
 
 export const PublicKoreaItem = ({ item }) => {
   const {
@@ -51,7 +52,14 @@ export const PublicKoreaItem = ({ item }) => {
             {splitNumber(defCnt)}
           </s.Title>
           <s.UpView styles={{ flex: 2 }}>
-            {incDec ? <Ionicons name="caret-up" color={color.red} /> : null}
+            {incDec ? (
+              <View style={{ width: 12, height: 12 }}>
+                <ReqireImage
+                  name="caret-up"
+                  styles={{ tintColor: color.red }}
+                />
+              </View>
+            ) : null}
             <s.Title styles={incDec ? upstyles : nonestyles}>
               {splitNumber(incDec)}
             </s.Title>
@@ -81,7 +89,12 @@ export const PublicKoreaItem = ({ item }) => {
           </s.Title>
           <s.UpView styles={{ flex: 4 }}>
             {isolIngCnt ? (
-              <Ionicons name="caret-up" color={color.dark_blue} />
+              <ReqireImage
+                name="caret-up"
+                styles={{
+                  tintColor: color.dark_blue,
+                }}
+              />
             ) : null}
             <s.Title
               styles={

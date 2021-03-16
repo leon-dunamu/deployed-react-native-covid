@@ -1,5 +1,5 @@
 import React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { ReqireImage } from "../../../components/require.image";
 import * as s from "./Article.styled";
 
 const Article = ({ route, navigation }) => {
@@ -26,7 +26,10 @@ const Article = ({ route, navigation }) => {
     <s.PageContainer>
       <s.Header>
         <s.BackButton onPress={_goBack}>
-          <Ionicons size={30} name="chevron-back-outline" />
+          <ReqireImage
+            name="chevron-back-outline"
+            styles={{ width: 30, height: 30 }}
+          />
         </s.BackButton>
         <s.sText styles={{ width: "auto" }}>코로나 기사</s.sText>
       </s.Header>

@@ -4,7 +4,7 @@ const accumulateCondition = (patientCount) => {
   if (patientCount < 1) {
     stateAlimi = {
       conditionTxt: "좋음",
-      conditionFace: "musical-notes",
+      conditionFace: "happy-outline",
       conditionBgColor: 1,
     };
   } else if (1 <= patientCount && patientCount <= 3) {

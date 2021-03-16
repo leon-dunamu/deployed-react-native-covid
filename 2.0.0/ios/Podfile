@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
-target '코로나 지수' do
+target 'covidjisu' do
   use_unimodules!
   config = use_native_modules!
 
