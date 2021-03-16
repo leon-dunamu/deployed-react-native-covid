@@ -1,12 +1,33 @@
-# covid app
+# 😷 코로나 지수 알리미
 
-### run device
+[정부혁신제안 해커톤 작품](https://github.com/1Seok2/Hack-GreenSky)과 [공공데이터](https://www.data.go.kr/index.do)를 활용하여 만든 코로나 앱
+
+- 원스토어에 배포됨 __*코로나지수*__
+
+### 🛠 사용 기술
+
+<img src="https://img.shields.io/badge/react-61DAFB?style=flat-square&logo=React&logoColor=white"/> 
+<img src="https://img.shields.io/badge/redux-764ABC?style=flat-square&logo=Redux&logoColor=white"/>
+<img src="https://img.shields.io/badge/styledcomponents-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
+<br/>
+
+<br/>
+
+## 📸 앱 스크린샷
+
+<img src="https://user-images.githubusercontent.com/49581472/111152870-95570080-85d4-11eb-8007-9ef6cb20c03c.png" width="100%" />
+
+<br/>
+
+<br/>
+
+### 🐞 Run device
 
 ```bash
-adb -s R39N300CZMF reverse tcp:8081 tcp:8081
+adb -s <device name> reverse tcp:8081 tcp:8081
 ```
 
-### build
+### 🏭 Build
 
 ```bash
 react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle
