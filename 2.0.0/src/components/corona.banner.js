@@ -11,7 +11,8 @@ import accumulateJisu from "./accumulate.jisu";
 import accumulateCondition from "./accumulate.condition";
 import * as s from "./corona.styled";
 import { color } from "../assets/style/color";
-import { ReqireImage } from "./require.image";
+// import { ReqireImage } from "./require.image";
+import Icons from "react-native-vector-icons/Ionicons";
 
 const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
   const [state, setState] = React.useState({
@@ -55,7 +56,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
 
   React.useEffect(() => {
     getInfo();
-  }, []);
+  }, [MapReducer]);
 
   const regionData = KoreaReducer.find((item) => item.gubun === state.region);
 
@@ -70,14 +71,15 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
           <s.cFace loading={state.isLoading}>
             {state.isLoading ? null : (
               <>
-                <ReqireImage
+                {/* <ReqireImage
                   name={state.conditionFace}
                   styles={{
                     width: 80,
                     height: 80,
                     tintColor: "#666",
                   }}
-                />
+                /> */}
+                <Icons name={state.conditionFace} size={80} color={"#666"} />
               </>
             )}
           </s.cFace>
@@ -93,7 +95,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
                   {state.address}
                 </s.iAddress>
                 <s.RefreshButton onPress={() => getInfo()}>
-                  <ReqireImage
+                  {/* <ReqireImage
                     name="refresh-outline"
                     styles={{
                       marginLeft: 2,
@@ -101,6 +103,12 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
                       height: 24,
                       tintColor: "#666",
                     }}
+                  /> */}
+                  <Icons
+                    name="refresh-outline"
+                    style={{ marginLeft: 2 }}
+                    size={24}
+                    color={"#666"}
                   />
                 </s.RefreshButton>
               </>
@@ -138,12 +146,13 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
           <s.Info loading={state.isLoading}>
             {state.isLoading ? null : (
               <>
-                <ReqireImage
+                {/* <ReqireImage
                   name="caret-up"
                   styles={{
                     tintColor: color.red,
                   }}
-                />
+                /> */}
+                <Icons name="caret-up" color={color.red} />
                 <s.iCount styles={{ color: color.red, marginRight: "8px" }}>
                   {regionData && regionData.incDec}
                 </s.iCount>

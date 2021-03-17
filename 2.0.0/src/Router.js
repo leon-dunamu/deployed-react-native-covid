@@ -32,7 +32,8 @@ import { getKoreaVaccine, VACCINE_BASE_DATE } from "./api/api-vaccine";
 import { getCoronamapData } from "./api/api-coronamap";
 import { getKoreaCorona } from "./api/api-korea";
 import { getNews } from "./api/api-news";
-import { ReqireImage } from "./components/require.image";
+// import { ReqireImage } from "./components/require.image";
+import Icons from "react-native-vector-icons/Ionicons";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -49,6 +50,63 @@ const StackNavigator = () => (
   </Stack.Navigator>
 );
 
+export const fetchDataPriority = async (saveCoronamap, saveKorea) => {
+  const nowDate =
+    new Date().getHours() > 14
+      ? moment(nowDate)
+      : moment(nowDate).subtract(1, "days");
+  const nowDateFormat = moment(nowDate).format("YYYYMMDD");
+  let mapResult = null;
+  let krResult = null;
+  let error = false;
+
+  try {
+    mapResult = await getCoronamapData();
+    krResult = await getKoreaCorona(nowDateFormat);
+  } catch (e) {
+    error = true;
+    console.log("api error", e);
+  } finally {
+    const kritem = krResult.data.response.body.items.item;
+
+    mapResult.status === 200 && saveCoronamap(mapResult.data.data);
+    kritem && saveKorea(kritem);
+  }
+
+  return error;
+};
+
+export const fetchDataLater = async (saveWorld, saveVaccine, saveNews) => {
+  const nowDate =
+    new Date().getHours() > 14
+      ? moment(nowDate)
+      : moment(nowDate).subtract(1, "days");
+  const nowDateFormat = moment(nowDate).format("YYYYMMDD");
+  const pageIndex = nowDate.diff(VACCINE_BASE_DATE, "days") + 1;
+  let wrResult = null;
+  let vcResult = null;
+  let nwResult = null;
+  let error = false;
+
+  try {
+    vcResult = await getKoreaVaccine(pageIndex);
+    wrResult = await getWorldCorona(nowDateFormat);
+    nwResult = await getNews(1);
+  } catch (e) {
+    error = true;
+    console.log("api error", e);
+  } finally {
+    const writem = wrResult.data.response.body.items.item;
+    const nwitem = nwResult.data.response.body.items.item;
+
+    writem && saveWorld(writem);
+    vcResult.data.data && saveVaccine(vcResult.data.data);
+    nwitem && saveNews(nwitem);
+  }
+
+  return error;
+};
+
 const Router = ({
   saveWorld,
   saveVaccine,
@@ -57,57 +115,11 @@ const Router = ({
   saveNews,
 }) => {
   React.useEffect(() => {
-    const nowDate =
-      new Date().getHours() > 14
-        ? moment(nowDate)
-        : moment(nowDate).subtract(1, "days");
-    const nowDateFormat = moment(nowDate).format("YYYYMMDD");
-    const pageIndex = nowDate.diff(VACCINE_BASE_DATE, "days") + 1;
-
-    const fetchDataPriority = async () => {
-      let mapResult = null;
-      let krResult = null;
-
-      try {
-        mapResult = await getCoronamapData();
-        krResult = await getKoreaCorona(nowDateFormat);
-      } catch (e) {
-        console.log("api error", e);
-      } finally {
-        const kritem = krResult.data.response.body.items.item;
-
-        mapResult.status === 200 && saveCoronamap(mapResult.data.data);
-        kritem && saveKorea(kritem);
-      }
-    };
-
-    const fetchDataLater = async () => {
-      let wrResult = null;
-      let vcResult = null;
-      let nwResult = null;
-
-      try {
-        vcResult = await getKoreaVaccine(pageIndex);
-        wrResult = await getWorldCorona(nowDateFormat);
-        nwResult = await getNews(1);
-      } catch (e) {
-        console.log("api error", e);
-      } finally {
-        const writem = wrResult.data.response.body.items.item;
-        const nwitem = nwResult.data.response.body.items.item;
-
-        writem && saveWorld(writem);
-        vcResult.data.data && saveVaccine(vcResult.data.data);
-        nwitem && saveNews(nwitem);
-      }
-    };
-
-    fetchDataPriority();
-    fetchDataLater();
+    let r1 = fetchDataPriority(saveCoronamap, saveKorea);
+    let r2 = fetchDataLater(saveWorld, saveVaccine, saveNews);
   }, []);
 
   React.useEffect(() => {
-    console.log("done");
     setTimeout(() => {
       SplashScreen.hide();
     }, 1700);
@@ -136,12 +148,7 @@ const Router = ({
               iconName = focused ? "eyedrop" : "eyedrop-outline";
             }
 
-            return (
-              <ReqireImage
-                name={iconName}
-                styles={{ width: size, height: size, tintColor: color }}
-              />
-            );
+            return <Icons size={size} color={color} name={iconName} />;
           },
         })}
         tabBarOptions={{
@@ -161,3 +168,10 @@ const Router = ({
 };
 
 export default connect(null, mapDispatchToPropsFromStore)(Router);
+/*
+
+              <ReqireImage
+                name={iconName}
+                styles={{ width: size, height: size, tintColor: color }}
+              />
+*/

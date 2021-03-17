@@ -83,6 +83,7 @@ project.ext.react = [
 
 apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle" // add this line
 apply from: "../../node_modules/expo-constants/scripts/get-app-config-android.gradle"
 apply from: "../../node_modules/expo-updates/scripts/create-manifest-android.gradle"
 
@@ -135,8 +136,9 @@ android {
         applicationId "com.ws.covid"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "2.1"
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -176,6 +178,18 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             signingConfig signingConfigs.release
         }
+    }
+    packagingOptions { 
+        exclude 'META-INF/NOTICE' 
+        exclude 'META-INF/LICENSE' 
+        exclude 'META-INF/DEPENDENCIES' 
+        exclude 'META-INF/ASL2.0' 
+        exclude 'META-INF/DEPENDENCIES.txt' 
+        exclude 'META-INF/LICENSE.txt' 
+        exclude 'META-INF/NOTICE.txt' 
+        exclude 'META-INF/notice.txt' 
+        exclude 'META-INF/license.txt' 
+        exclude 'META-INF/LGPL2.1' 
     }
 
     // applicationVariants are e.g. debug, release

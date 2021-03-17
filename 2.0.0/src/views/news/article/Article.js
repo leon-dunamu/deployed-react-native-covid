@@ -1,5 +1,6 @@
 import React from "react";
-import { ReqireImage } from "../../../components/require.image";
+// import { ReqireImage } from "../../../components/require.image";
+import Icons from "react-native-vector-icons/Ionicons";
 import * as s from "./Article.styled";
 
 const Article = ({ route, navigation }) => {
@@ -26,10 +27,11 @@ const Article = ({ route, navigation }) => {
     <s.PageContainer>
       <s.Header>
         <s.BackButton onPress={_goBack}>
-          <ReqireImage
+          {/* <ReqireImage
             name="chevron-back-outline"
             styles={{ width: 30, height: 30 }}
-          />
+          /> */}
+          <Icons name="chevron-back-outline" size={30} />
         </s.BackButton>
         <s.sText styles={{ width: "auto" }}>코로나 기사</s.sText>
       </s.Header>

@@ -3,8 +3,9 @@ import { splitNumber } from "../components/split.number";
 import { color } from "../assets/style/color";
 import * as s from "./public.styled";
 import moment from "moment";
-import { ReqireImage } from "./require.image";
+// import { ReqireImage } from "./require.image";
 import { View } from "react-native";
+import Icons from "react-native-vector-icons/Ionicons";
 
 export const PublicKoreaItem = ({ item }) => {
   const {
@@ -53,12 +54,7 @@ export const PublicKoreaItem = ({ item }) => {
           </s.Title>
           <s.UpView styles={{ flex: 2 }}>
             {incDec ? (
-              <View style={{ width: 12, height: 12 }}>
-                <ReqireImage
-                  name="caret-up"
-                  styles={{ tintColor: color.red }}
-                />
-              </View>
+              <Icons name="caret-up" size={12} color={color.red} />
             ) : null}
             <s.Title styles={incDec ? upstyles : nonestyles}>
               {splitNumber(incDec)}
@@ -89,12 +85,7 @@ export const PublicKoreaItem = ({ item }) => {
           </s.Title>
           <s.UpView styles={{ flex: 4 }}>
             {isolIngCnt ? (
-              <ReqireImage
-                name="caret-up"
-                styles={{
-                  tintColor: color.dark_blue,
-                }}
-              />
+              <Icons name="caret-up" color={color.dark_blue} />
             ) : null}
             <s.Title
               styles={
@@ -257,3 +248,21 @@ export const PublicNewsItem = ({ item, navigation }) => {
     </s.ItemContainer>
   );
 };
+
+/*
+
+              <View style={{ width: 12, height: 12 }}>
+                <ReqireImage
+                  name="caret-up"
+                  styles={{ tintColor: color.red }}
+                />
+              </View>
+
+
+              <ReqireImage
+                name="caret-up"
+                styles={{
+                  tintColor: color.dark_blue,
+                }}
+              />
+*/
