@@ -5,7 +5,7 @@ export const toastMessage = (message) => {
     message,
     ToastAndroid.LONG,
     ToastAndroid.BOTTOM,
-    25,
-    50
+    0,
+    200
   );
 };

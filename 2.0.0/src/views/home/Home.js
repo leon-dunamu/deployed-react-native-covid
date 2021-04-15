@@ -14,8 +14,8 @@ import { PublicKoreaItem } from "../../components/public.item";
 import KoreaHeader from "../../components/korea.header";
 import { HomeContainer, PublicScroll } from "./Home.styled";
 import CoronaBanner from "../../components/corona.banner";
-import { fetchDataPriority } from "../../Router";
 import { toastMessage } from "../../components/toast.message";
+import { fetchDataPriority } from "../../components/fetch.data";
 
 const Home = ({
   state: { KoreaReducer: stateKorea },

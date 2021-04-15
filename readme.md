@@ -2,7 +2,7 @@
 
 [정부혁신제안 해커톤 작품](https://github.com/1Seok2/Hack-GreenSky)과 [공공데이터](https://www.data.go.kr/index.do)를 활용하여 만든 코로나 앱
 
-- 원스토어에 배포됨 __*코로나지수*__
+- 원스토어에 배포됨 **_코로나지수_**
 
 ### 🛠 사용 기술
 
@@ -24,7 +24,7 @@
 ### 🐞 Run device
 
 ```bash
-adb -s <device name> reverse tcp:8081 tcp:8081
+adb -s R39N300CZMF reverse tcp:8081 tcp:8081
 ```
 
 ### 🏭 Build

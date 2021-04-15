@@ -18,3 +18,5 @@ export const PUBLIC_NEWS_URL = (idx) =>
 export const CORONAMAP_URL = "https://coroname.me/getdata";
 
 export const GITPAGES_URL = "https://1seok2.github.io/Hack-GreenSky/#";
+
+export const LAMBDA_URL = (param,type) => `https://ugxtzdljzj.execute-api.ap-northeast-2.amazonaws.com/2020-08-04/covid?api_key=${PUBLIC_API_KEY}&extra_param=${param}&type=${type}`

@@ -13,6 +13,7 @@ import * as s from "./corona.styled";
 import { color } from "../assets/style/color";
 // import { ReqireImage } from "./require.image";
 import Icons from "react-native-vector-icons/Ionicons";
+import { toastMessage } from "./toast.message";
 
 const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
   const [state, setState] = React.useState({
@@ -51,6 +52,7 @@ const CoronaBanner = ({ state: { KoreaReducer, MapReducer } }) => {
         region,
         ...infoObj,
       });
+      toastMessage("위치를 파악했습니다");
     }, 300);
   };
 
