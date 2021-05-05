@@ -4,10 +4,9 @@
  */
 
 import React from "react";
-import { ActivityIndicator, SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native";
 import { WebView } from "react-native-webview";
 import { GITPAGES_URL } from "../../config/urls";
-import { Height, Width } from "../../assets/style/dimension";
 
 const Map = () => {
   return (

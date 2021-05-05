@@ -27,10 +27,6 @@ const Article = ({ route, navigation }) => {
     <s.PageContainer>
       <s.Header>
         <s.BackButton onPress={_goBack}>
-          {/* <ReqireImage
-            name="chevron-back-outline"
-            styles={{ width: 30, height: 30 }}
-          /> */}
           <Icons name="chevron-back-outline" size={30} />
         </s.BackButton>
         <s.sText styles={{ width: "auto" }}>코로나 기사</s.sText>
@@ -40,7 +36,7 @@ const Article = ({ route, navigation }) => {
           {title}
         </s.sText>
         <s.sText styles={{ marginBottom: "14px" }}>
-          {wrtDt} {countryName}{" "}
+          {wrtDt} {countryName}
         </s.sText>
         <s.sText>{content.split("&nbsp;").join("\n")}</s.sText>
         <s.Empty />

@@ -56,7 +56,7 @@ const News = ({
       </TitleContainer>
       <FlatList
         style={{ flex: 1, width: "100%", height: "100%" }}
-        keyExtractor={(item, idx) => `${Math.random()}`}
+        keyExtractor={(item) => item.title}
         data={stateNews}
         renderItem={({ item, index }) => (
           <PublicNewsItem item={item} index={index} navigation={navigation} />

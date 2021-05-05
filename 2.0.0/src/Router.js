@@ -104,10 +104,3 @@ const Router = ({
 };
 
 export default connect(null, mapDispatchToPropsFromStore)(Router);
-/*
-
-              <ReqireImage
-                name={iconName}
-                styles={{ width: size, height: size, tintColor: color }}
-              />
-*/

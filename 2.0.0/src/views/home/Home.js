@@ -3,19 +3,20 @@
  * @description 전국현황
  */
 
-import React from "react";
-import { RefreshControl } from "react-native";
-import { connect } from "react-redux";
+import React from 'react';
+import { RefreshControl } from 'react-native';
+import { connect } from 'react-redux';
 import {
   mapDispatchToPropsFromStore,
   mapStateToPropsFromStore,
-} from "../../store/actions";
-import { PublicKoreaItem } from "../../components/public.item";
-import KoreaHeader from "../../components/korea.header";
-import { HomeContainer, PublicScroll } from "./Home.styled";
-import CoronaBanner from "../../components/corona.banner";
-import { toastMessage } from "../../components/toast.message";
-import { fetchDataPriority } from "../../components/fetch.data";
+} from '../../store/actions';
+import { PublicKoreaItem } from '../../components/public.item';
+
+import KoreaHeader from '../../components/Header/Korea.header';
+import { HomeContainer, PublicScroll } from './Home.styled';
+import CoronaBanner from '../../components/corona.banner';
+import { toastMessage } from '../../components/toast.message';
+import { fetchDataPriority } from '../../components/fetch.data';
 
 const Home = ({
   state: { KoreaReducer: stateKorea },
@@ -24,16 +25,16 @@ const Home = ({
 }) => {
   const [refresh, setRefresh] = React.useState(false);
 
-  const _onRefresh = () => {
+  const _onRefresh = async () => {
     setRefresh(true);
-    fetchDataPriority(saveCoronamap, saveKorea).then((res) => {
-      setRefresh(false);
-      if (res) {
-        toastMessage("데이터를 불러오는데 실패하였습니다");
-      } else {
-        toastMessage("최신 데이터를 조회하였습니다");
-      }
-    });
+    const resultError = await fetchDataPriority(saveCoronamap, saveKorea);
+
+    setRefresh(false);
+    if (resultError) {
+      toastMessage('데이터를 불러오는데 실패하였습니다');
+    } else {
+      toastMessage('최신 데이터를 조회하였습니다');
+    }
   };
 
   return (
@@ -55,5 +56,5 @@ const Home = ({
 
 export default connect(
   mapStateToPropsFromStore,
-  mapDispatchToPropsFromStore
+  mapDispatchToPropsFromStore,
 )(Home);
